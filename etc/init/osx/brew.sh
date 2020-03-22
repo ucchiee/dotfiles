@@ -1,1 +1,1 @@
-brew install coreutils
+brew install tmux
