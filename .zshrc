@@ -25,6 +25,8 @@ SAVEHIST=1000000
 # 2行表示
 #PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 #%# "
+PROMPT="%~
+"
 
 
 # 単語の区切り文字を指定する
@@ -117,10 +119,25 @@ setopt extended_glob
 bindkey '^R' history-incremental-pattern-search-backward
 
 ########################################
+# ls_colorsの設定
+# ~/.dircolorsにシンボリックリンクを-sオプションで貼っておく
+if [ -f ~/.dircolors ]; then
+    if type dircolors > /dev/null 2>&1; then
+        eval $(dircolors ~/.dircolors)
+    elif type gdircolors > /dev/null 2>&1; then
+        eval $(gdircolors ~/.dircolors)
+    fi
+fi
+# zshの色と合わせる
+if [ -n "$LS_COLORS" ]; then
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+fi
+########################################
 # エイリアス
 
-alias la='ls -a'
-alias ll='ls -l'
+alias ls='gls'
+alias la='gls -a'
+alias ll='gls -l'
 
 alias rm='rm -i'
 alias cp='cp -i'
