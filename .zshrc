@@ -40,3 +40,9 @@ alias grep='grep --color=auto'
 alias ...='cd ../../'
 alias his='history -E -i 1 | fzf'
 
+## tmux gitの情報を載せるためのもの
+function precmd() {
+  if [ ! -z $TMUX ]; then
+    tmux refresh-client -S
+  fi
+}
