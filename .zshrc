@@ -1,3 +1,5 @@
+# homeのbinを追加
+PATH=$PATH:~/bin
 # テーマ読み込み
 source ~/dotfiles/zsh-my-theme.sh
 # Tabで選択できるように
@@ -37,3 +39,4 @@ alias ls='ls -G'
 alias grep='grep --color=auto'
 alias ...='cd ../../'
 alias his='history -E -i 1 | fzf'
+
