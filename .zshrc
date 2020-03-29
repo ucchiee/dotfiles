@@ -39,6 +39,12 @@ alias ls='ls -G'
 alias grep='grep --color=auto'
 alias ...='cd ../../'
 alias his='history -E -i 1 | fzf'
+alias gi='git init'
+alias ga='git add'
+alias gc='git commit'
+alias gps='git push'
+alias gpl='git pull'
+alias gs='git status'
 
 ## tmux gitの情報を載せるためのもの
 function precmd() {
