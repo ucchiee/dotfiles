@@ -1,3 +1,9 @@
+"color scheme
+syntax enable
+"set background=dark    "dart or light
+colorscheme lucario 
+let g:molokai_original = 1
+let g:rehash256 = 1
 "encodingの設定
 set encoding=utf-8
 scriptencoding utf-8
@@ -24,7 +30,7 @@ nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 "カーソル関連
 set whichwrap=b,s,h,l,<,>,[,],~ " カーソルの左右移動で行末から次の行の行頭への移動が可能になる
 set number " 行番号を表示
-set cursorline " カーソルラインをハイライト
+"set cursorline " カーソルラインをハイライト
 
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
