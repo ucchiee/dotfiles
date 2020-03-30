@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-if git_status=$(cd $1 && git status 2>/dev/null ); then
+if git_status=$(cd $1 && git --no-optional-locks status 2>/dev/null ); then
   git_branch="$(echo $git_status| awk 'NR==1 {print $3}')"
   case $git_status in
     *Changes\ not\ staged* ) state="#[bg=colour013,fg=black] ± #[fg=default]" ;;
