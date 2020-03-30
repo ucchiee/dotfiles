@@ -1,6 +1,6 @@
 "color scheme
 syntax enable
-"set background=dark    "dart or light
+"set background=light    "dart or light
 colorscheme lucario 
 let g:molokai_original = 1
 let g:rehash256 = 1
