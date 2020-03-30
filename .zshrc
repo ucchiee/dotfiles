@@ -45,6 +45,7 @@ alias gc='git commit'
 alias gps='git push'
 alias gpl='git pull'
 alias gs='git status'
+alias gb='git branch'
 alias g='git'
 
 ## tmux gitの情報を載せるためのもの
