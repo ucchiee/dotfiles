@@ -46,7 +46,13 @@ alias gps='git push'
 alias gpl='git pull'
 alias gs='git status'
 alias gb='git branch'
+alias gd='git diff'
 alias g='git'
+alias gt='git tree'
+alias G='grep'
+alias jn='jupyter notebook'
+alias f='cd /Volumes/SANDISK/nagase/program/git/'
+alias j='cd /Volumes/SANDISK'
 
 ## tmux gitの情報を載せるためのもの
 function precmd() {

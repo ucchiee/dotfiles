@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/uu/dotfiles/.vim'
+let g:netrw_dirhist_2='/Users/uu/Applications'
+let g:netrw_dirhist_3='/Volumes/SANDISK/nagase/program/git/ger_criterion_info/.git'
+let g:netrw_dirhist_4='/Volumes/SANDISK/nagase/program/git/get_criterion_info/.git'
+let g:netrw_dirhist_5='/Volumes/SANDISK/nagase/program/django/mysite/polls/migrations'
