@@ -1,0 +1,2 @@
+NOW_BRANCH=`git rev-parse --abbrev-ref HEAD`
+git push --set-upstream origin $NOW_BRANCH
