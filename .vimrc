@@ -77,9 +77,26 @@ endif
 
 " カーソル移動
 inoremap <C-e> <Esc>$a
-inoremap <C-a> <Esc>^a
+inoremap <C-a> <Esc>^i
 noremap <C-e> <Esc>$a
-noremap <C-a> <Esc>^a
+noremap <C-a> <Esc>^i
+
+" lsp関連
+"let g:lsp_diagnostics_enabled = 1
+"let g:lsp_diagnostics_echo_cursor = 1
+"let g:asyncomplete_auto_popup = 1
+"let g:asyncomplete_auto_completeopt = 0
+"let g:asyncomplete_popup_delay = 200
+"let g:lsp_text_edit_enabled = 1
+
+"補完関連
+" 補完表示時のEnterで改行をしない
+inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
+
+set completeopt=menuone,noinsert
+inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
+inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
+
 
 " NeoBundle関連
 " Note: Skip initialization for vim-tiny or vim-small.
@@ -102,6 +119,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
+NeoBundle 'prabirshrestha/async.vim'
+NeoBundle 'prabirshrestha/vim-lsp'
+NeoBundle 'mattn/vim-lsp-settings'
+NeoBundle 'prabirshrestha/asyncomplete.vim'
+NeoBundle 'prabirshrestha/asyncomplete-lsp.vim'
+NeoBundle 'mattn/vim-lsp-icons'
+NeoBundle 'hrsh7th/vim-vsnip'
+NeoBundle 'hrsh7th/vim-vsnip-integ'
 
 call neobundle#end()
 
