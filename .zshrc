@@ -52,10 +52,14 @@ alias g='git'
 alias gt='git tree'
 alias G='grep'
 alias jn='jupyter notebook'
+alias jl='jupyter lab'
 alias f='cd /Volumes/SANDISK/nagase/program/git/'
-alias j='cd /Volumes/SANDISK'
+alias j='cd /Volumes/SANDISK/TokyoTech/jk3/1q'
+alias k='cd /Volumes/SANDISK/TokyoTech/DeepLab/workspace'
 alias c='clear'
 alias ggl='open -a google\ chrome'
+alias jk='ssh -ND 1080 titech-computing-room'
+alias jkjk='ssh titech-computing-room'
 
 ## tmux gitの情報を載せるためのもの
 function precmd() {
