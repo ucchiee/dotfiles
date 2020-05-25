@@ -1,0 +1,9 @@
+async.vim
+asyncomplete-lsp.vim
+asyncomplete.vim
+neobundle.vim
+vim-lsp
+vim-lsp-icons
+vim-lsp-settings
+vim-vsnip
+vim-vsnip-integ
