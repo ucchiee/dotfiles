@@ -1,0 +1,8 @@
+[user]
+	name = Yusuke Uchida
+	email = fantomyuu0623@gmail.com
+[core]
+[color]
+	ui = auto
+[alias]
+    tree = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09by"%C(cyan ul)%an%Creset" %x09%C(auto)%s %d'
