@@ -1,9 +1,19 @@
 # homeのbinを追加
 PATH=$PATH:~/bin
+# pure関連
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+prompt pure
 # テーマ読み込み
-source ~/dotfiles/zsh-my-theme.sh
+# source ~/dotfiles/zsh-my-theme.sh
 # Tabで選択できるように
 zstyle ':completion:*:default' menu select=2
+# zsh-completions(補完機能)の設定
+if [ -e /usr/local/share/zsh-completions ]; then
+    fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+autoload -U compinit
+compinit -u
 # 補完で大文字にもマッチ
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # ファイル補完候補に色を付ける
