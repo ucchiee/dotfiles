@@ -79,6 +79,14 @@ alias ggl='open -a google\ chrome'
 alias jk='ssh -ND 1080 titech-computing-room'
 alias jkjk='ssh titech-computing-room'
 
+# pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+
 ## tmux gitの情報を載せるためのもの
 function precmd() {
   if [ ! -z $TMUX ]; then
