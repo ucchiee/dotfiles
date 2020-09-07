@@ -16,71 +16,87 @@ noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^i
 
 "----------------------------------------------------------
-" NeoBundle
+" dein
 "----------------------------------------------------------
 if has('vim_starting')
     " 初回起動時のみruntimepathにNeoBundleのパスを指定する
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
     " NeoBundleが未インストールであればgit cloneする
-    if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
-        echo "install NeoBundle..."
-        :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+    if !isdirectory(expand("~/.cache/dein/repos/github.com/Shougo/dein.vim"))
+        echo "install dein..."
+        " :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+        :call system("curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh")
+        :call system("sh ./installer.sh ~/.cache/dein")
+        :call system("rm installer.sh")
     endif
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
 
-" インストールするVimプラグインを以下に記述
-" NeoBundle自身を管理
-NeoBundleFetch 'Shougo/neobundle.vim'
-" カラースキームmolokai/onedark
-NeoBundle 'tomasr/molokai'
-NeoBundle 'joshdick/onedark.vim'
-NeoBundle 'kuroitu/pyceberg'
-NeoBundle 'cocopon/iceberg.vim'
-" ステータスラインの表示内容強化
-NeoBundle 'itchyny/lightline.vim'
-" インデントの可視化
-NeoBundle 'Yggdroot/indentLine'
-" 末尾の全角半角空白文字を赤くハイライト
-NeoBundle 'bronson/vim-trailing-whitespace'
-" 構文エラーチェック
-NeoBundle 'scrooloose/syntastic'
-" 多機能セレクタ
-NeoBundle 'ctrlpvim/ctrlp.vim'
-" CtrlPの拡張プラグイン. 関数検索
-NeoBundle 'tacahiroy/ctrlp-funky'
-" CtrlPの拡張プラグイン. コマンド履歴検索
-NeoBundle 'suy/vim-ctrlp-commandline'
-" CtrlPの検索にagを使う
-NeoBundle 'rking/ag.vim'
-" プロジェクトに入ってるESLintを読み込む
-NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
-" かっこなどの自動保管
-NeoBundle 'mattn/vim-lexiv'
-" コメントアウト
-NeoBundle 'tyru/caw.vim'
-" syntax hightlight
-NeoBundle 'sheerun/vim-polyglot'
+if dein#load_state('~/.cache/dein')
+    call dein#begin('~/.cache/dein')
 
-" vimのlua機能が使える時だけ以下のVimプラグインをインストールする
-if has('lua')
-    " コードの自動補完
-    NeoBundle 'Shougo/neocomplete.vim'
-    " スニペットの補完機能
-    NeoBundle "Shougo/neosnippet"
-    " スニペット集
-    NeoBundle 'Shougo/neosnippet-snippets'
+    " color scheme
+    call dein#add('tomasr/molokai')
+    call dein#add('joshdick/onedark.vim')
+    call dein#add('kuroitu/pyceberg')
+    " カラースキームmolokai/onedark
+    call dein#add('tomasr/molokai')
+    call dein#add('joshdick/onedark.vim')
+    call dein#add('kuroitu/pyceberg')
+    call dein#add('cocopon/iceberg.vim')
+    " ステータスラインの表示内容強化
+    call dein#add('itchyny/lightline.vim')
+    " インデントの可視化
+    call dein#add('Yggdroot/indentLine')
+    " 末尾の全角半角空白文字を赤くハイライト
+    call dein#add('bronson/vim-trailing-whitespace')
+    " 構文エラーチェック
+    call dein#add('scrooloose/syntastic')
+    " 多機能セレクタ
+    call dein#add('ctrlpvim/ctrlp.vim')
+    " CtrlPの拡張プラグイン. 関数検索
+    call dein#add('tacahiroy/ctrlp-funky')
+    " CtrlPの拡張プラグイン. コマンド履歴検索
+    call dein#add('suy/vim-ctrlp-commandline')
+    " CtrlPの検索にagを使う
+    call dein#add('rking/ag.vim')
+    " プロジェクトに入ってるESLintを読み込む
+    call dein#add('pmsorhaindo/syntastic-local-eslint.vim')
+    " かっこなどの自動保管
+    call dein#add('mattn/vim-lexiv')
+    " コメントアウト
+    call dein#add('tyru/caw.vim')
+    " syntax hightlight
+    call dein#add('sheerun/vim-polyglot')
+    " deinも管理
+    call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+    " 補完
+    call dein#add('Shougo/deoplete.nvim')
+    if !has('nvim')
+        call dein#add('roxma/nvim-yarp')
+        call dein#add('roxma/vim-hug-neovim-rpc')
+    endif
+    let g:deoplete#enable_at_startup = 1
+
+    " スニペット
+    call dein#add('Shougo/neosnippet.vim')
+    call dein#add('Shougo/neosnippet-snippets')
+    " git関連
+    call dein#add('airblade/vim-gitgutter')
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('tpope/vim-rhubarb')
+
+    call dein#end()
+    call dein#save_state()
 endif
 
-call neobundle#end()
-
-" ファイルタイプ別のVimプラグイン/インデントを有効にする
 filetype plugin indent on
 
 " 未インストールのVimプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
-NeoBundleCheck
+if dein#check_install()
+    call dein#install()
+endif
 
 "----------------------------------------------------------
 " カラースキーム
@@ -94,12 +110,12 @@ NeoBundleCheck
 " syntax enable " 構文に色を付ける
 "
 " onedark
-" syntax on
-" colorscheme onedark
+syntax on
+colorscheme onedark
 
 " pyceberg
-syntax on
-colorscheme pyceberg
+" syntax on
+" colorscheme pyceberg
 
 "----------------------------------------------------------
 " 文字
@@ -198,27 +214,32 @@ if &term =~ "xterm"
 endif
 
 "----------------------------------------------------------
-" neocomplete・neosnippetの設定
+" deoplete・neosnippetの設定
 "----------------------------------------------------------
-if neobundle#is_installed('neocomplete.vim')
-    " Vim起動時にneocompleteを有効にする
-    let g:neocomplete#enable_at_startup = 1
-    " smartcase有効化. 大文字が入力されるまで大文字小文字の区別を無視する
-    let g:neocomplete#enable_smart_case = 1
-    " 3文字以上の単語に対して補完を有効にする
-    let g:neocomplete#min_keyword_length = 1
-    " 区切り文字まで補完する
-    let g:neocomplete#enable_auto_delimiter = 1
-    " 1文字目の入力から補完のポップアップを表示
-    let g:neocomplete#auto_completion_start_length = 1
-    " バックスペースで補完のポップアップを閉じる
-    inoremap <expr><BS> neocomplete#smart_close_popup()."<C-h>"
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-    " エンターキーで補完候補の確定. スニペットの展開もエンターキーで確定
-    imap <expr><CR> neosnippet#expandable() ? "<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "<C-y>" : "<CR>"
-    " タブキーで補完候補の選択. スニペット内のジャンプもタブキーでジャンプ
-    imap <expr><TAB> pumvisible() ? "<C-n>" : neosnippet#jumpable() ? "<Plug>(neosnippet_expand_or_jump)" : "<TAB>"
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
 endif
+
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+" Tell Neosnippet about the other snippets
+" let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 "----------------------------------------------------------
 " Syntastic
