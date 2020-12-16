@@ -85,6 +85,14 @@ alias syssoft='cd ~/class/os/xv6-riscv&&docker run -it --rm -v $(pwd):/home/xv6/
 alias vvim='vim -u NONE -N'
 alias n='nvim'
 
+# pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+
 ## tmux gitの情報を載せるためのもの
 function precmd() {
   if [ ! -z $TMUX ]; then
