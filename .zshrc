@@ -50,6 +50,7 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
+alias sl='ls'
 alias l='ls -ltrG'
 alias la='ls -laG'
 alias ll='ls -lG'
@@ -68,16 +69,21 @@ alias gb='git branch'
 alias gd='git diff'
 alias g='git'
 alias gt='git tree'
+alias gcl='git clone'
 alias G='grep'
 alias jn='jupyter notebook'
 alias jl='jupyter lab'
 alias f='cd ~/Documents/nagase/program/git/'
-alias j='cd ~/Documents/TokyoTech/jk3/2q'
+alias j='cd ~/Documents/TokyoTech/jk3/4q'
 alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
+alias d='cd ~/Documents/recruit/git'
 alias c='clear'
 alias ggl='open -a google\ chrome'
 alias jk='ssh -ND 1080 titech-computing-room'
 alias jkjk='ssh titech-computing-room'
+alias syssoft='cd ~/class/os/xv6-riscv&&docker run -it --rm -v $(pwd):/home/xv6/xv6-riscv wtakuo/xv6-env'
+alias vvim='vim -u NONE -N'
+alias n='nvim'
 
 ## tmux gitの情報を載せるためのもの
 function precmd() {
@@ -85,3 +91,10 @@ function precmd() {
     tmux refresh-client -S
   fi
 }
+
+# anyenv
+eval "$(anyenv init -)"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
