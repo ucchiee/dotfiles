@@ -50,6 +50,7 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
+alias sl='ls'
 alias l='ls -ltrG'
 alias la='ls -laG'
 alias ll='ls -lG'
@@ -68,12 +69,14 @@ alias gb='git branch'
 alias gd='git diff'
 alias g='git'
 alias gt='git tree'
+alias gcl='git clone'
 alias G='grep'
 alias jn='jupyter notebook'
 alias jl='jupyter lab'
 alias f='cd ~/Documents/nagase/program/git/'
 alias j='cd ~/Documents/TokyoTech/jk3/4q'
 alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
+alias d='cd ~/Documents/recruit/git'
 alias c='clear'
 alias ggl='open -a google\ chrome'
 alias jk='ssh -ND 1080 titech-computing-room'
@@ -95,12 +98,9 @@ function precmd() {
   fi
 }
 
-if [ -e "$HOME/.anyenv" ]
-then
-    export ANYENV_ROOT="$HOME/.anyenv"
-    export PATH="$ANYENV_ROOT/bin:$PATH"
-    if command -v anyenv 1>/dev/null 2>&1
-    then
-        eval "$(anyenv init -)"
-    fi
-fi
+# anyenv
+eval "$(anyenv init -)"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
