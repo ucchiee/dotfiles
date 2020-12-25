@@ -82,6 +82,8 @@ alias ggl='open -a google\ chrome'
 alias jk='ssh -ND 1080 titech-computing-room'
 alias jkjk='ssh titech-computing-room'
 alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
+alias vvim='vim -u NONE -N'
+alias n='nvim'
 
 # pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
