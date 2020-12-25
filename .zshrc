@@ -72,7 +72,7 @@ alias G='grep'
 alias jn='jupyter notebook'
 alias jl='jupyter lab'
 alias f='cd ~/Documents/nagase/program/git/'
-alias j='cd ~/Documents/TokyoTech/jk3/2q'
+alias j='cd ~/Documents/TokyoTech/jk3/4q'
 alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
 alias c='clear'
 alias ggl='open -a google\ chrome'
@@ -94,3 +94,13 @@ function precmd() {
     tmux refresh-client -S
   fi
 }
+
+if [ -e "$HOME/.anyenv" ]
+then
+    export ANYENV_ROOT="$HOME/.anyenv"
+    export PATH="$ANYENV_ROOT/bin:$PATH"
+    if command -v anyenv 1>/dev/null 2>&1
+    then
+        eval "$(anyenv init -)"
+    fi
+fi
