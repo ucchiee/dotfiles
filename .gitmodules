@@ -1,3 +1,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:tomato-300yen/nvim.git
+[submodule ".config/ranger/ranger_devicons"]
+	path = .config/ranger/ranger_devicons
+	url = https://github.com/alexanderjeurissen/ranger_devicons
