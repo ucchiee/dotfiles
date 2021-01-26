@@ -1,5 +1,7 @@
 # dotfiles
-my private dotfiles
+Uchida's Integrated Environment, UIE
+
+![UIE](./img/screenshot.png)
 
 ## ranger
 * mac
