@@ -7,6 +7,6 @@ my private dotfiles
     brew install ranger
     ```
 * ubuntu
-* ```
+```
     sudo apt install ranger
-* ```
+```
