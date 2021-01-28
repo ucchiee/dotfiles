@@ -84,6 +84,8 @@ alias jkjk='ssh titech-computing-room'
 alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
 alias vvim='vim -u NONE -N'
 alias n='nvim'
+alias smaller="sed -i '' 's/size: 22.0/size: 15.0/g' ~/.config/alacritty/alacritty.yml"
+alias bigger="sed -i '' 's/size: 15.0/size: 22.0/g' ~/.config/alacritty/alacritty.yml"
 
 # pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
