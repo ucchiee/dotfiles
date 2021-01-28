@@ -78,7 +78,7 @@ selection:
 
 live_config_reload: true
 
-# key_bindings:
+key_bindings:
 #   - { key: V, mods: Control|Shift, action: Paste }
 #   - { key: C, mods: Control|Shift, action: Copy }
 #   - { key: Key0, mods: Control, action: ResetFontSize }
@@ -86,4 +86,4 @@ live_config_reload: true
 #   - { key: Add, mods: Control, action: IncreaseFontSize }
 #   - { key: Subtract, mods: Control, action: DecreaseFontSize }
 #   - { key: Minus, mods: Control, action: DecreaseFontSize }
-#   - { key: N, mods: Control, action: SpawnNewInstance }
+  - { key: N, mods: Control, action: SpawnNewInstance }
