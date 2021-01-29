@@ -84,9 +84,10 @@ alias jkjk='ssh titech-computing-room'
 alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
 alias vvim='vim -u NONE -N'
 alias n='nvim'
-export ALACRITTY_FONT_SIZE_NOW=15.
-alias smaller=' sed -i '' \"s/size: $ALACRITTY_FONT_SIZE_NOW/size: $(($ALACRITTY_FONT_SIZE_NOW - 3.0))/g\" ~/.config/alacritty/alacritty.yml&&export ALACRITTY_FONT_SIZE_NOW=$(($ALACRITTY_FONT_SIZE_NOW - 3))'
-alias bigger=' sed -i '' \"s/size: $ALACRITTY_FONT_SIZE_NOW/size: $(($ALACRITTY_FONT_SIZE_NOW + 3.0))/g\" ~/.config/alacritty/alacritty.yml&&export ALACRITTY_FONT_SIZE_NOW=$(($ALACRITTY_FONT_SIZE_NOW + 3))'
+export CURRENT_FONT_SIZE_NOW=15.
+alias reset_font='sed -i "" "s/size: .../size: 15./g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE_NOW=15.'
+alias smaller=' sed -i "" "s/size: $CURRENT_FONT_SIZE_NOW/size: $(($CURRENT_FONT_SIZE_NOW - 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE_NOW=$(($CURRENT_FONT_SIZE_NOW - 3))'
+alias bigger=' sed -i "" "s/size: $CURRENT_FONT_SIZE_NOW/size: $(($CURRENT_FONT_SIZE_NOW + 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE_NOW=$(($CURRENT_FONT_SIZE_NOW + 3))'
 # alias bigger="sed -i '' 's/size: 15.0/size: 18.0/g' ~/.config/alacritty/alacritty.yml"
 
 # pyenv
