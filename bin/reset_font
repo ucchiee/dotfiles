@@ -1,2 +1,0 @@
-sed -i "" "s/size: .../size: 15./g" ~/.config/alacritty/alacritty.yml
-export CURRENT_FONT_SIZE=15.

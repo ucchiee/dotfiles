@@ -1,2 +1,0 @@
-sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE - 3.0))/g" ~/.config/alacritty/alacritty.yml
-&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE - 3))
