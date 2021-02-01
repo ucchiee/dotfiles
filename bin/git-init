@@ -1,3 +1,0 @@
-git init
-pre-commit install
-cp $DOTFILES_DIR/.pre-commit-config.yaml .
