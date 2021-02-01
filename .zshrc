@@ -1,3 +1,5 @@
+# dotfilesのディレクトリを環境変数として持っておく
+export DOTFILES_DIR=$HOME/dotfiles
 # homeのbinを追加
 PATH=$PATH:~/bin
 # pure関連
@@ -58,7 +60,7 @@ alias ls='ls -G'
 alias grep='grep --color=auto'
 alias ...='cd ../../'
 alias his='history -E -i 1 | fzf'
-alias gi='git init'
+alias gi='git-init'
 alias ga='git add'
 alias gc='git commit'
 alias gps='git push'
@@ -70,7 +72,7 @@ alias gd='git diff'
 alias g='git'
 alias gt='git tree'
 alias gcl='git clone'
-alias gcl='git merge'
+alias gm='git merge'
 alias G='grep'
 alias jn='jupyter notebook'
 alias jl='jupyter lab'
@@ -110,4 +112,3 @@ eval "$(anyenv init -)"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
