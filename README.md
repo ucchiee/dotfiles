@@ -12,3 +12,8 @@ Uchida's Integrated Environment, UIE
 ```
     sudo apt install ranger
 ```
+
+## TODO
+
+1. Write this README
+2. Change the image above (too large)
