@@ -15,5 +15,6 @@ Uchida's Integrated Environment, UIE
 
 ## TODO
 
-1. Write this README
-2. Change the image above (too large)
+1. Write this README.
+2. Change the image above (too large).
+3. Write install scripts for macOS and Ubuntu.
