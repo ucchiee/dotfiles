@@ -95,6 +95,7 @@ alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
 alias vvim='vim -u NONE -N'
 alias n='nvim'
 alias t='tmux'
+alias lg='lazygit'
 export CURRENT_FONT_SIZE=15.
 alias reset_font='sed -i "" "s/size: .../size: 15./g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=15.'
 alias smaller=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE - 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE - 3))'
