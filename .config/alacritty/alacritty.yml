@@ -27,7 +27,7 @@ colors:
     cyan: "#56b6c2"
     white: "#ECEFF4"
 
-background_opacity: 0.85
+background_opacity: 1
 
 font:
   normal:
@@ -57,8 +57,8 @@ window:
   padding:
     x: 1
     y: 1
-  decolations: transparent # mac only
-  startup_mode: SimpleFullscreen # mac only
+  # decolations: transparent # mac only
+  # startup_mode: SimpleFullscreen # mac only
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
