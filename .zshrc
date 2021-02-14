@@ -114,3 +114,6 @@ eval "$(anyenv init -)"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pipenv
+eval "$(pipenv --completion)"
