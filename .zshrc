@@ -28,6 +28,11 @@ compinit -u
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # ファイル補完候補に色を付ける
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# history関連を明示的に設定する
+export HISTFILE=${HOME}/.zsh_history
+HISTSIZE=99999
+HISTFILESIZE=99999
+SAVEHIST=$HISTSIZE
 setopt auto_param_slash       # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
 setopt mark_dirs              # ファイル名の展開でディレクトリにマッチした場合 末尾に / を付加
 setopt auto_menu              # 補完キー連打で順に補完候補を自動で補完
@@ -35,6 +40,7 @@ setopt interactive_comments   # コマンドラインでも # 以降をコメン
 setopt magic_equal_subst      # コマンドラインの引数で --prefix=/usr などの = 以降でも補完できる
 setopt complete_in_word       # 語の途中でもカーソル位置で補完
 setopt print_eight_bit        # 日本語ファイル名等8ビットを通す
+setopt inc_append_history
 setopt extended_history       # record timestamp of command in HISTFILE
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt share_history          # 他のターミナルとヒストリーを共有
@@ -89,6 +95,7 @@ alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
 alias vvim='vim -u NONE -N'
 alias n='nvim'
 alias t='tmux'
+alias lg='lazygit'
 export CURRENT_FONT_SIZE=15.
 alias reset_font='sed -i "" "s/size: .../size: 15./g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=15.'
 alias smaller=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE - 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE - 3))'
