@@ -1,3 +1,4 @@
+# zmodload zsh/zprof && zprof
 # dotfilesのディレクトリを環境変数として持っておく
 export DOTFILES_DIR=$HOME/dotfiles
 # homeのbinを追加
@@ -117,6 +118,7 @@ function precmd() {
 }
 
 # anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 # fzf
@@ -124,3 +126,7 @@ eval "$(anyenv init -)"
 
 # pipenv
 eval "$(pipenv --completion)"
+
+# if (which zprof > /dev/null 2>&1) ;then
+#   zprof
+# fi
