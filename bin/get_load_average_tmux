@@ -1,3 +1,4 @@
 #!/bin/sh
 
-echo "(#[fg=yellow]$(uptime | awk '{print $(NF-2)}')#[default]) "
+# echo "#[default](#[fg=yellow]$(uptime | awk '{print $(NF-2)}')#[default])"
+echo "($(uptime | awk '{print $(NF-2)}'))"
