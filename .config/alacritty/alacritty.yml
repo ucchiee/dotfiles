@@ -57,8 +57,8 @@ window:
   padding:
     x: 1
     y: 1
-  decolations: transparent # mac only
-  startup_mode: SimpleFullscreen # mac only
+  # decolations: transparent # mac only
+  # startup_mode: SimpleFullscreen # mac only
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
