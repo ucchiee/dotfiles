@@ -52,7 +52,6 @@ setopt print_eight_bit        # 日本語ファイル名を表示可能にする
 setopt hist_ignore_all_dups   # 同じコマンドをヒストリに残さない
 setopt auto_cd                # ディレクトリ名だけでcdする
 setopt no_beep                # ビープ音を消す
-setopt correct                # スペルミスをした場合に候補を表示する
 # コマンドを途中まで入力後、historyから絞り込み
 autoload -Uz history-search-end
 zle -N history-beginning-search-backward-end history-search-end
