@@ -1,3 +1,4 @@
+source $ZDOTDIR/.zsh_alias
 # zmodload zsh/zprof && zprof
 # dotfilesのディレクトリを環境変数として持っておく
 export DOTFILES_DIR=$HOME/dotfiles
@@ -52,59 +53,13 @@ setopt print_eight_bit        # 日本語ファイル名を表示可能にする
 setopt hist_ignore_all_dups   # 同じコマンドをヒストリに残さない
 setopt auto_cd                # ディレクトリ名だけでcdする
 setopt no_beep                # ビープ音を消す
+
 # コマンドを途中まで入力後、historyから絞り込み
 autoload -Uz history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
-
-alias sl='ls'
-alias l='ls -ltrG'
-alias la='ls -lhaG'
-alias ll='ls -lhG'
-alias ls='ls -G'
-alias grep='grep --color=auto'
-alias ...='cd ../../'
-alias his='history -E -i 1 | fzf'
-alias gi='git init'
-alias pc='pre-commit install&&cp $DOTFILES_DIR/.pre-commit-config.yaml .'
-alias ga='git add'
-alias gc='git commit'
-alias gps='git push'
-alias gpl='git pull'
-alias gck='git checkout'
-alias gs='git branch;git status'
-alias gb='git branch'
-alias gd='git diff'
-alias g='git'
-alias gt='git tree'
-alias gcl='git clone'
-alias gm='git merge'
-alias G='grep'
-alias jn='jupyter notebook'
-alias jl='jupyter lab'
-alias f='cd ~/Code'
-alias j='cd ~/Documents/TokyoTech/jk4/1q'
-alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
-alias c='clear'
-alias ggl='open -a google\ chrome'
-alias jk='ssh -ND 1080 titech-computing-room'
-alias jkjk='ssh titech-computing-room'
-alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
-alias v='vim'
-alias vv='vim -u NONE -N'
-alias sv='vim -u $DOTFILES_DIR/simple.vimrc -N'
-alias n='nvim'
-alias nn='nvim-nighty'
-alias vn='nvim -u NONE -N'
-alias sn='nvim -u $DOTFILES_DIR/simple.vimrc -N'
-alias t='tmux'
-alias lg='lazygit'
-export CURRENT_FONT_SIZE=15.
-alias reset_font='sed -i "" "s/size: .../size: 15./g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=15.'
-alias smaller=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE - 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE - 3))'
-alias bigger=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE + 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE + 3))'
 
 # pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
