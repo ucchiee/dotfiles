@@ -41,3 +41,6 @@ alias sn='nvim -u $DOTFILES_DIR/simple.vimrc -N'
 alias t='tmux'
 alias lg='lazygit'
 export CURRENT_FONT_SIZE=15.
+alias reset_font='sed -i "" "s/size: .../size: 15./g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=15.'
+alias smaller=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE - 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE - 3))'
+alias bigger=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE + 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE + 3))'
