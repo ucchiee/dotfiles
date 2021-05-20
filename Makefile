@@ -1,5 +1,5 @@
 DOTFILES_EXCLUDES := .DS_Store .git .gitmodules .travis.yml .config .gitignore .pre-commit-config.yaml
-DOTFILES_TARGET   := $(wildcard .??*) bin
+DOTFILES_TARGET   := $(wildcard .??*) bin zsh
 DOTFILES_DIR      := $(PWD)
 DOTFILES_FILES    := $(filter-out $(DOTFILES_EXCLUDES), $(DOTFILES_TARGET))
 CONFIG_TARGET     := $(wildcard .config/??*)
