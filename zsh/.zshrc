@@ -22,7 +22,7 @@ prompt pure
 zstyle ':completion:*:default' menu select=2
 # zsh-completions(補完機能)の設定
 if [ -e /usr/local/share/zsh-completions ]; then
-    fpath=(/usr/local/share/zsh-completions $fpath)
+  fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 autoload -U compinit
 compinit -u
@@ -64,9 +64,9 @@ bindkey "^N" history-beginning-search-forward-end
 # pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:$PATH
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+  export PATH=${PYENV_ROOT}/bin:$PATH
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
 
 ## tmux gitの情報を載せるためのもの
