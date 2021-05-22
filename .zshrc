@@ -135,3 +135,5 @@ eval "$(pipenv --completion)"
 # if (which zprof > /dev/null 2>&1) ;then
 #   zprof
 # fi
+
+[ -f ~/.xkb/mykbd.xkb ] && xkbcomp -I$HOME/.xkb ~/.xkb/mykbd.xkb $DISPLAY 2> /dev/null
