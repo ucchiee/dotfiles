@@ -1,3 +1,5 @@
 bin/chromedriver
 bin/spin_check
 .DS_Store
+
+zsh/.zcompdump
