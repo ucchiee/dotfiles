@@ -41,11 +41,9 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 cmap w!! w !sudo tee %
 " turn off highlighting
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
-
+" Easy ESC
 inoremap jk <Esc>
 inoremap kj <Esc>
-inoremap jj <Esc>
-inoremap kk <Esc>
 " <C-l> in general mode will move to text buffer
 nnoremap <C-l> :bnext<CR>
 nnoremap <S-Right> :blast<CR>
