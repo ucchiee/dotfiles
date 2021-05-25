@@ -36,6 +36,8 @@ set ignorecase                          " Ignore case
 set smartcase                           " Override ignore case for mixed case searches
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " You can't stop me
 cmap w!! w !sudo tee %
