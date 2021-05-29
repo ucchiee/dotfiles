@@ -1,11 +1,15 @@
+# alias for ls, cd
 alias sl='ls'
 alias l='ls -ltrG'
 alias la='ls -lhaG'
 alias ll='ls -lhG'
 alias ls='ls -G'
-alias grep='grep --color=auto'
 alias ...='cd ../../'
-alias his='history -E -i 1 | fzf'
+alias f='cd ~/Code'
+alias j='cd ~/Documents/TokyoTech/jk4/1q'
+alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
+
+# alias for git
 alias gi='git init'
 alias pc='pre-commit install&&cp $DOTFILES_DIR/.pre-commit-config.yaml .'
 alias ga='git add'
@@ -20,17 +24,8 @@ alias g='git'
 alias gt='git tree'
 alias gcl='git clone'
 alias gm='git merge'
-alias G='grep'
-alias jn='jupyter notebook'
-alias jl='jupyter lab'
-alias f='cd ~/Code'
-alias j='cd ~/Documents/TokyoTech/jk4/1q'
-alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
-alias c='clear'
-alias ggl='open -a google\ chrome'
-alias jk='ssh -ND 1080 titech-computing-room'
-alias jkjk='ssh titech-computing-room'
-alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
+
+# alias for vim, tmux, lazygit, lazydocker
 alias v='vim'
 alias vv='vim -u NONE -N'
 alias sv='vim -u $DOTFILES_DIR/simple.vimrc -N'
@@ -42,11 +37,26 @@ alias sn='nvim -u $DOTFILES_DIR/simple.vimrc -N'
 alias t='tmux'
 alias lg='lazygit'
 alias gl='lazygit'
-alias ld='lazydocker'
+alias ldk='lazydocker'  # "ld" overwrite ld command.
 alias dl='lazydocker'
+
+# alias for alacritty
 export CURRENT_FONT_SIZE=15.
 alias reset_font='sed -i "" "s/size: .../size: 15./g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=15.'
 alias smaller=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE - 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE - 3))'
 alias bigger=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE + 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE + 3))'
+
+# alias for zsh
 alias zshtime='for for i in $(seq 1 10); do time zsh -i -c exit; done'
 alias init='source $ZDOTDIR/.zsh_env'
+
+# other useful alias
+alias grep='grep --color=auto'
+alias G='grep'
+alias his='history -E -i 1 | fzf'
+alias jn='jupyter notebook'
+alias jl='jupyter lab'
+alias c='clear'
+alias ggl='open -a google\ chrome'
+alias jk='ssh -ND 1080 titech-computing-room'
+alias jkjk='ssh titech-computing-room'
