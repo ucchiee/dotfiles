@@ -8,9 +8,7 @@ fi
 
 ## tmux gitの情報を載せるためのもの
 function precmd() {
-  if [ ! -z $TMUX ]; then
-    tmux refresh-client -S
-  fi
+  [ ! -z $TMUX ] && tmux refresh-client -S
 }
 
 # anyenv
