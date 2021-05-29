@@ -35,3 +35,8 @@ bindkey "^N" history-beginning-search-forward-end
 
 # Settings for backslash
 [ -f ~/.xkb/mykbd.xkb ] && xkbcomp -I$HOME/.xkb ~/.xkb/mykbd.xkb $DISPLAY 2> /dev/null
+
+## tmux gitの情報を載せるためのもの
+function precmd() {
+  [ ! -z $TMUX ] && tmux refresh-client -S
+}
