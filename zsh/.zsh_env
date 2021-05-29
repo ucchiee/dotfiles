@@ -6,11 +6,6 @@ if [ -d "${PYENV_ROOT}" ]; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-## tmux gitの情報を載せるためのもの
-function precmd() {
-  [ ! -z $TMUX ] && tmux refresh-client -S
-}
-
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
