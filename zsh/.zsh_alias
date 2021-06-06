@@ -25,7 +25,7 @@ alias gt='git tree'
 alias gcl='git clone'
 alias gm='git merge'
 
-# alias for vim, tmux, lazygit, lazydocker
+# alias for (Neo)Vim, tmux, lazygit, lazydocker
 alias v='vim'
 alias vv='vim -u NONE -N'
 alias sv='vim -u $DOTFILES_DIR/simple.vimrc -N'
@@ -48,7 +48,7 @@ alias bigger=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE
 
 # alias for zsh
 alias zshtime='for for i in $(seq 1 10); do time zsh -i -c exit; done'
-alias init='source $ZDOTDIR/.zsh_env'
+alias init='source $ZDOTDIR/.zsh_env_lazy'
 
 # other useful alias
 alias grep='grep --color=auto'
