@@ -1,0 +1,13 @@
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pipenv
+eval "$(pipenv --completion)"
+
+# if (which zprof > /dev/null 2>&1) ;then
+#   zprof
+# fi
