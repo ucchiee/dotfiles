@@ -25,7 +25,7 @@ alias gt='git tree'
 alias gcl='git clone'
 alias gm='git merge'
 
-# alias for (Neo)Vim, tmux, lazygit, lazydocker
+# alias for tools
 alias v='vim'
 alias vv='vim -u NONE -N'
 alias sv='vim -u $DOTFILES_DIR/simple.vimrc -N'
@@ -39,6 +39,7 @@ alias lg='lazygit'
 alias gl='lazygit'
 alias ldk='lazydocker'  # "ld" overwrite ld command.
 alias dl='lazydocker'
+alias jq.='jq .'
 
 # alias for alacritty
 export CURRENT_FONT_SIZE=15.
