@@ -49,7 +49,7 @@ alias bigger=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE
 
 # alias for zsh
 alias zshtime='for for i in $(seq 1 10); do time zsh -i -c exit; done'
-alias init='source $ZDOTDIR/.zsh_env_lazy'
+alias init='source $ZDOTDIR/zsh_env_lazy'
 
 # other useful alias
 alias grep='grep --color=auto'
