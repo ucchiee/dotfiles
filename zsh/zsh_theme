@@ -1,4 +1,4 @@
-# pure関連
+# pure
 fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 # optionally define some options
