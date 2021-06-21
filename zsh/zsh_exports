@@ -1,4 +1,3 @@
-export ZDOTDIR=$HOME/zsh
 PATH=$PATH:~/bin
 # pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
