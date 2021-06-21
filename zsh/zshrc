@@ -1,7 +1,15 @@
-source $ZDOTDIR/zsh_exports
-source $ZDOTDIR/zsh_aliases
-source $ZDOTDIR/zsh_theme
-source $ZDOTDIR/zsh_comp
-source $ZDOTDIR/zsh_optns
+# Useful Functions
+source $ZDOTDIR/zsh-functions
+
+# Source files
+zsh_add_file "zsh_exports"
+zsh_add_file "zsh_aliases"
+zsh_add_file "zsh_theme"
+zsh_add_file "zsh_comp"
+zsh_add_file "zsh_optns"
 # You can source .zsh_env_lazy by "init" alias
-# source $ZDOTDIR/.zsh_env_lazy
+# zsh_add_file "zsh_env_lazy"
+
+# Plugin
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
