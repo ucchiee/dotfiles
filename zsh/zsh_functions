@@ -14,6 +14,19 @@ function zsh_add_plugin() {
     fi
 }
 
+function zsh_add_theme() {
+    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+    if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then
+        fpath+="$ZDOTDIR/plugins/$PLUGIN_NAME"
+        autoload -U promptinit; promptinit
+        zsh_add_file "$2"
+        prompt "$PLUGIN_NAME"
+    else
+        git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
+    fi
+
+}
+
 function zsh_add_completion() {
     PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
     if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then
@@ -32,5 +45,5 @@ function zsh_add_completion() {
 
 # Function to show git info on tmux
 function precmd() {
-  [ ! -z $TMUX ] && tmux refresh-client -S
+    [ ! -z $TMUX ] && tmux refresh-client -S
 }
