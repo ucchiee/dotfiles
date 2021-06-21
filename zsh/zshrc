@@ -1,7 +1,7 @@
 # Useful Functions
 source $ZDOTDIR/zsh_functions
 
-# Source files
+# Files to source
 zsh_add_file "zsh_exports"
 zsh_add_file "zsh_aliases"
 zsh_add_file "zsh_theme"
