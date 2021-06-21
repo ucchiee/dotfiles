@@ -1,0 +1,7 @@
+source $ZDOTDIR/zsh_exports
+source $ZDOTDIR/zsh_aliases
+source $ZDOTDIR/zsh_theme
+source $ZDOTDIR/zsh_comp
+source $ZDOTDIR/zsh_optns
+# You can source .zsh_env_lazy by "init" alias
+# source $ZDOTDIR/.zsh_env_lazy
