@@ -15,7 +15,7 @@ function zsh_add_plugin() {
 }
 
 function zsh_add_theme() {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2 | cut -d "-" -f 1)
     if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then
         fpath+="$ZDOTDIR/plugins/$PLUGIN_NAME"
         autoload -U promptinit; promptinit
