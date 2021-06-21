@@ -1,4 +1,11 @@
-PATH=$PATH:~/bin
+export HISTFILE=${HOME}/.zsh_history
+HISTSIZE=99999
+HISTFILESIZE=99999
+SAVEHIST=$HISTSIZE
+export PATH="$HOME/bin":$PATH
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+
 # pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
