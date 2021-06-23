@@ -27,10 +27,8 @@ zsh_add_theme "sindresorhus/pure" "zsh_pure"
 # Keybinding
 bindkey -s '^o' 'ranger^M'
 # bindkey -s '^f' 'zi^M'
-bindkey -s '^s' 'ncdu^M'
+bindkey -s '^@' 'ncdu^M'
 bindkey "^p" up-line-or-beginning-search # Up
 bindkey "^k" up-line-or-beginning-search # Up
 bindkey "^n" down-line-or-beginning-search # Down
 bindkey "^j" down-line-or-beginning-search # Down
-bindkey -r "^u"
-bindkey -r "^d"
