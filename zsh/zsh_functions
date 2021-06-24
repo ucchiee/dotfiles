@@ -3,28 +3,39 @@ function zsh_add_file() {
     [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
 }
 
+function zsh_enable_plugin() {
+    # $1: plugin name
+    zsh_add_file "plugins/$1/$1.plugin.zsh" || \
+    zsh_add_file "plugins/$1/$1.zsh"
+}
+
 function zsh_add_plugin() {
     PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
     if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then
-        # For plugins
-        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
-        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
+        zsh_enable_plugin $PLUGIN_NAME
     else
         git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
+        zsh_enable_plugin $PLUGIN_NAME
     fi
+}
+
+function zsh_enable_theme() {
+    # $1: theme name
+    # $2: theme config file
+    fpath+="$ZDOTDIR/plugins/$1"
+    autoload -U promptinit; promptinit
+    zsh_add_file "$2"
+    prompt "$1"
 }
 
 function zsh_add_theme() {
     PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2 | cut -d "-" -f 1)
     if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then
-        fpath+="$ZDOTDIR/plugins/$PLUGIN_NAME"
-        autoload -U promptinit; promptinit
-        zsh_add_file "$2"
-        prompt "$PLUGIN_NAME"
+        zsh_enable_theme $PLUGIN_NAME $2
     else
         git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
+        zsh_enable_theme $PLUGIN_NAME $2
     fi
-
 }
 
 function zsh_add_completion() {
