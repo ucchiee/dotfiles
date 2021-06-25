@@ -19,6 +19,7 @@ zsh_add_file "zsh_optns"
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_theme "sindresorhus/pure" "zsh_pure"
+# zsh_add_theme "romkatv/powerlevel10k" ""
 # zsh_add_theme "reobin/typewritten" ""
 # zsh_add_theme "spaceship-prompt/spaceship-prompt" ""
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
