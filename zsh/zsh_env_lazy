@@ -1,7 +1,3 @@
-# anyenv
-# export PATH="$HOME/.anyenv/bin:$PATH"
-# eval "$(anyenv init -)"
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
