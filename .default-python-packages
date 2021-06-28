@@ -1,0 +1,4 @@
+pynvim
+pipenv
+black
+flake8

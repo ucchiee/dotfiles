@@ -6,23 +6,26 @@ zle -N down-line-or-beginning-search
 # Useful Functions
 source $ZDOTDIR/zsh_functions
 
+# Plugin
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "asdf-vm/asdf"
+zsh_add_theme "sindresorhus/pure" "zsh_pure"
+# zsh_add_theme "romkatv/powerlevel10k" ""
+# zsh_add_theme "reobin/typewritten" ""
+# zsh_add_theme "spaceship-prompt/spaceship-prompt" ""
+# For more plugins: https://github.com/unixorn/awesome-zsh-plugins
+# More completions https://github.com/zsh-users/zsh-completions
+
 # Files to source
 zsh_add_file "zsh_exports"
 # zsh_add_file "zsh_vim_mode"
 zsh_add_file "zsh_aliases"
 zsh_add_file "zsh_comp"
 zsh_add_file "zsh_optns"
+zsh_add_file "$HOME/.fzf.zsh"
 # You can source .zsh_env_lazy by "init" alias
 # zsh_add_file "zsh_env_lazy"
-
-# Plugin
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-zsh_add_theme "sindresorhus/pure" "zsh_pure"
-# zsh_add_theme "reobin/typewritten" ""
-# zsh_add_theme "spaceship-prompt/spaceship-prompt" ""
-# For more plugins: https://github.com/unixorn/awesome-zsh-plugins
-# More completions https://github.com/zsh-users/zsh-completions
 
 # Keybinding
 bindkey -s '^o' 'ranger^M'
