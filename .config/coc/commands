@@ -1,8 +1,0 @@
-explorer
-python.setInterpreter
-python.sortImports
-editor.action.organizeImport
-python.setLinter
-python.runLinting
-workspace.diffDocument
-python.startREPL
