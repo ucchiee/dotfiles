@@ -6,7 +6,8 @@ function zsh_add_file() {
 function zsh_enable_plugin() {
     # $1: plugin name
     zsh_add_file "plugins/$1/$1.plugin.zsh" || \
-    zsh_add_file "plugins/$1/$1.zsh"
+    zsh_add_file "plugins/$1/$1.zsh" || \
+    zsh_add_file "plugins/$1/$1.sh"
 }
 
 function zsh_add_plugin() {
