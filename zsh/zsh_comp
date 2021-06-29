@@ -9,4 +9,11 @@ if [ -e $ASDF_DIR ]; then
   fpath=(${ASDF_DIR}/completions $fpath)
 fi
 autoload -Uz compinit
+# if [ $(date +'%Y-%m-%d') != $(/usr/bin/stat --format='%y' ${ZDOTDIR:-$HOME}/.zcompdump | awk '{print $1}') ]; then
+#   echo "compinit"
+#   compinit
+# else
+#   echo "compinit -C"
+#   compinit -C
+# fi
 compinit -C
