@@ -5,3 +5,4 @@ bin/spin_check
 zsh/.zcompdump
 zsh/*plugins*
 zsh/*session*
+zsh/.zsh_history
