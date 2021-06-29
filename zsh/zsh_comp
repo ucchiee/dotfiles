@@ -8,5 +8,5 @@ zstyle ':completion:*:default' menu select=2
 if [ -e $ASDF_DIR ]; then
   fpath=(${ASDF_DIR}/completions $fpath)
 fi
-autoload -U compinit
-compinit -u
+autoload -Uz compinit
+compinit -C
