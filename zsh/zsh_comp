@@ -7,6 +7,7 @@ zstyle ':completion:*:default' menu select=2
 # For pipenv completion
 if [ ! -f $ZDOTDIR/completion/_pipenv ]; then
   pipenv --completion > $ZDOTDIR/completion/_pipenv
+  rm $ZDOTDIR/.zcompdump
 fi
 # asdf
 if [ -e $ASDF_DIR ]; then
@@ -14,6 +15,7 @@ if [ -e $ASDF_DIR ]; then
 fi
 fpath=($ZDOTDIR/completion $fpath)
 autoload -Uz compinit
+compinit -C
 # if [ $(date +'%Y-%m-%d') != $(/usr/bin/stat --format='%y' ${ZDOTDIR:-$HOME}/.zcompdump | awk '{print $1}') ]; then
 #   echo "compinit"
 #   compinit
@@ -21,4 +23,3 @@ autoload -Uz compinit
 #   echo "compinit -C"
 #   compinit -C
 # fi
-compinit -C
