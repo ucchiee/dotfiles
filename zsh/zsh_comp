@@ -6,7 +6,7 @@ zstyle ':completion:*:default' menu select=2
 # fi
 # For pipenv completion
 if [ ! -e $ZDOTDIR/completion ]; then
-  madir $ZDOTDIR/completion
+  mkdir $ZDOTDIR/completion
 fi
 if [ ! -f $ZDOTDIR/completion/_pipenv ]; then
   pipenv --completion > $ZDOTDIR/completion/_pipenv
