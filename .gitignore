@@ -6,3 +6,4 @@ zsh/.zcompdump
 zsh/*plugins*
 zsh/*session*
 zsh/.zsh_history
+zsh/completion
