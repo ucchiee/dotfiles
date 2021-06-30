@@ -7,7 +7,7 @@ zstyle ':completion:*:default' menu select=2
 # For pipenv completion
 if [ ! -f $ZDOTDIR/completion/_pipenv ]; then
   pipenv --completion > $ZDOTDIR/completion/_pipenv
-  rm $ZDOTDIR/.zcompdump
+  [ -f $ZDOTDIR/.zcompdump ] && rm $ZDOTDIR/.zcompdump
 fi
 # asdf
 if [ -e $ASDF_DIR ]; then
