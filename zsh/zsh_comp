@@ -5,6 +5,9 @@ zstyle ':completion:*:default' menu select=2
 #   fpath=(/usr/local/share/zsh-completions $fpath)
 # fi
 # For pipenv completion
+if [ ! -e $ZDOTDIR/completion ]; then
+  madir $ZDOTDIR/completion
+fi
 if [ ! -f $ZDOTDIR/completion/_pipenv ]; then
   pipenv --completion > $ZDOTDIR/completion/_pipenv
   [ -f $ZDOTDIR/.zcompdump ] && rm $ZDOTDIR/.zcompdump
