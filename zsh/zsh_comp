@@ -1,18 +1,9 @@
 # Tabで選択できるように
 zstyle ':completion:*:default' menu select=2
-# For pipenv completion
-if [ ! -e $ZDOTDIR/completion ]; then
-  mkdir $ZDOTDIR/completion
-fi
-if [ ! -f $ZDOTDIR/completion/_pipenv ]; then
-  pipenv --completion > $ZDOTDIR/completion/_pipenv
-  [ -f $ZDOTDIR/.zcompdump ] && rm $ZDOTDIR/.zcompdump
-fi
-# asdf
 if [ -e $ASDF_DIR ]; then
   fpath=(${ASDF_DIR}/completions $fpath)
 fi
-fpath=($ZDOTDIR/completion $fpath)
+fpath=(${ZDOTDIR:-$HOME}/completion $fpath)
 autoload -Uz compinit
 compinit -C
 # if [ $(date +'%Y-%m-%d') != $(/usr/bin/stat --format='%y' ${ZDOTDIR:-$HOME}/.zcompdump | awk '{print $1}') ]; then
