@@ -24,7 +24,8 @@ esac
 
 # alias for cd
 alias ...='cd ../../'
-alias c='cd ~/Code'
+alias f='cd ~/Code'
+alias d='cd ~/dotfiles'
 alias j='cd ~/Documents/TokyoTech/jk4/1q'
 alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
 
@@ -46,7 +47,7 @@ alias gm='git merge'
 
 # alias for tools
 alias v='vim'
-alias f='fzf'
+alias z='fzf'
 alias vv='vim -u NONE -N'
 alias sv='vim -u $HOME/simple.vimrc -N'
 alias n='nvim'
