@@ -1,5 +1,5 @@
-bin/chromedriver
-bin/spin_check
+bin/bin/chromedriver
+bin/bin/spin_check
 .DS_Store
 
 **.zcompdump**
