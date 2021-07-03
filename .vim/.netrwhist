@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
-let g:netrw_dirhist_5='/home/uu/memo'
-let g:netrw_dirhist_4='/home/uu/Documents/nagase/program/git/tag_analysis'
-let g:netrw_dirhist_3='/Volumes/SANDISK/nagase/program/git/chugakunetwebapp/templates'
-let g:netrw_dirhist_2='/Volumes/SANDISK/nagase/program/git/chugakunetwebapp/templates/chugakunetwebapp'
-let g:netrw_dirhist_1='/Volumes/SANDISK/nagase/program/git/kakomonpj/.git'
