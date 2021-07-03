@@ -11,7 +11,7 @@ zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
 zsh_add_plugin "asdf-vm/asdf"
-zsh_add_plugin "tomato-300yen/zsh-pipenv-completion"
+zsh_add_plugin "ucchiee/zsh-pipenv-completion"
 zsh_add_theme "sindresorhus/pure" "zsh_pure"
 # zsh_add_theme "romkatv/powerlevel10k" ""
 # zsh_add_theme "reobin/typewritten" ""
@@ -44,3 +44,8 @@ bindkey -M menuselect '^h' vi-backward-char
 bindkey -M menuselect '^k' vi-up-line-or-history
 bindkey -M menuselect '^l' vi-forward-char
 bindkey -M menuselect '^j' vi-down-line-or-history
+
+# Hook direnv into your shell.
+# eval "$(asdf exec direnv hook zsh)"
+# A shortcut for asdf managed direnv.
+# direnv() { asdf exec direnv "$@"; }
