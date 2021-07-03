@@ -24,7 +24,7 @@ esac
 
 # alias for cd
 alias ...='cd ../../'
-alias f='cd ~/Code'
+alias c='cd ~/Code'
 alias j='cd ~/Documents/TokyoTech/jk4/1q'
 alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
 
@@ -46,6 +46,7 @@ alias gm='git merge'
 
 # alias for tools
 alias v='vim'
+alias f='fzf'
 alias vv='vim -u NONE -N'
 alias sv='vim -u $HOME/simple.vimrc -N'
 alias n='nvim'
@@ -76,7 +77,6 @@ alias G='grep'
 alias his='history -E -i 1 | fzf'
 alias jn='jupyter notebook'
 alias jl='jupyter lab'
-alias c='clear'
 alias ggl='open -a google\ chrome'
 alias jk='ssh -ND 1080 titech-computing-room'
 alias jkjk='ssh titech-computing-room'
