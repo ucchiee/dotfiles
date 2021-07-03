@@ -1,17 +1,25 @@
 # dotfiles
-Uchida's Integrated Environment, UIE
 
-![UIE](./img/screenshot.png)
+Integrated terminal configuration.
 
-## ranger
-* mac
-    ```
-    brew install ranger
-    ```
-* ubuntu
+![UIE](./screenshot.png)
+
+## How to install
+
+```sh
+git clone git@github.com:ucchiee/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+make deploy
 ```
-    sudo apt install ranger
-```
+
+## Useful Tools
+
+- alacritty
+- asdf
+- ncdu
+- neovim
+- ranger
+- tmux
 
 ## TODO
 
