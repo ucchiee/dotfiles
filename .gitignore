@@ -1,11 +1,9 @@
 bin/bin/chromedriver
 bin/bin/spin_check
-.DS_Store
+**.DS_Store**
 
 **.zcompdump**
-zsh/*plugins*
-zsh/*session*
+zsh/.config/zsh/*session*
 **.zsh_history**
-zsh/completion
 **plugin**
 **completion**
