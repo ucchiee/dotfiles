@@ -8,8 +8,7 @@ Integrated terminal configuration.
 
 ```sh
 git clone git@github.com:ucchiee/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-stow */
+stow -d ~/dotfiles --ignore=etc */
 ```
 
 ## Useful Tools

@@ -1,5 +1,5 @@
 deploy:
-	stow --target=${HOME} */
+	stow -d ~/dotfiles --ignore=etc */
 
 asdf-init:
 	asdf plugin add python
