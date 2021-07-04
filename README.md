@@ -15,10 +15,15 @@ stow -d ~/dotfiles --ignore=etc */
 
 - alacritty
 - asdf
+- fd
+- fzf
 - ncdu
 - neovim
 - ranger
+- ripgrep
+- silversearcher-ag
 - tmux
+- universal-ctags
 
 ## TODO
 
