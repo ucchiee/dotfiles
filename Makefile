@@ -2,6 +2,7 @@ deploy:
 	stow --target=${HOME} */
 
 asdf-init:
-	asdf plug add python
-	asdf plug add nodejs
+	asdf plugin add python
+	asdf plugin add nodejs
 	asdf install
+	asdf reshim
