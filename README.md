@@ -23,6 +23,7 @@ stow -d ~/dotfiles --ignore=etc */
 - ripgrep
 - silversearcher-ag
 - tmux
+  - reattach-to-user-namespace(for mac)
 - universal-ctags
 
 ## TODO
