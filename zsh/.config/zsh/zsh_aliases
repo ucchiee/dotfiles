@@ -26,6 +26,7 @@ esac
 alias ...='cd ../../'
 alias f='cd ~/Code'
 alias d='cd ~/dotfiles'
+alias c='cd ~/'
 alias j='cd ~/Documents/TokyoTech/jk4/1q'
 alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
 
