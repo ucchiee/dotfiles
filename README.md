@@ -8,8 +8,7 @@ Integrated terminal configuration.
 
 ```sh
 git clone git@github.com:ucchiee/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-stow */
+stow -d ~/dotfiles --ignore=etc */
 ```
 
 You can also install useful tools.
@@ -22,10 +21,16 @@ pip install ranger-fm
 
 - alacritty
 - asdf
+- fd
+- fzf
 - ncdu
 - neovim
 - ranger
+- ripgrep
+- silversearcher-ag
 - tmux
+  - reattach-to-user-namespace(for mac)
+- universal-ctags
 
 ## TODO
 

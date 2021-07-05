@@ -1,5 +1,9 @@
 bin/bin/chromedriver
 bin/bin/spin_check
+bin/bin/lazygit
+karabiner/.config/karabiner/assets
+karabiner/.config/karabiner/*auto*
+
 **.DS_Store**
 
 **.zcompdump**
