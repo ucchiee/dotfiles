@@ -12,6 +12,12 @@ cd ~/dotfiles
 stow */
 ```
 
+You can also install useful tools.
+
+```sh
+pip install ranger-fm
+```
+
 ## Useful Tools
 
 - alacritty
