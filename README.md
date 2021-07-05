@@ -1,6 +1,6 @@
 # dotfiles
 
-Integrated terminal configuration.
+A collection of the dotfiles I need to remain sane when using \*NIX.
 
 ![UIE](./screenshot.png)
 
