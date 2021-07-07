@@ -63,12 +63,6 @@ alias vn='nvim -u NONE -N'
 alias vv='vim -u NONE -N'
 alias z='fzf'
 
-# alias for alacritty
-export CURRENT_FONT_SIZE=15.
-alias reset_font='sed -i "" "s/size: .../size: 15./g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=15.'
-alias smaller=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE - 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE - 3))'
-alias bigger=' sed -i "" "s/size: $CURRENT_FONT_SIZE/size: $(($CURRENT_FONT_SIZE + 3.0))/g" ~/.config/alacritty/alacritty.yml&&export CURRENT_FONT_SIZE=$(($CURRENT_FONT_SIZE + 3))'
-
 # alias for zsh
 alias zshtime='for for i in $(seq 1 10); do time zsh -i -c exit; done'
 alias init='source $ZDOTDIR/zsh_env_lazy'
