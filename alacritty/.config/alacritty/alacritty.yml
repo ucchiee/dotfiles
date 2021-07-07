@@ -84,6 +84,7 @@ key_bindings:
   - { key: V, mods: Control|Shift, action: Paste }
   - { key: C, mods: Control|Shift, action: Copy }
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+  - { key: F10, action: ToggleSimpleFullscreen }
   - { key: F11, action: ToggleFullscreen }
   - { key: Semicolon, mods: Control, action: IncreaseFontSize }
   - { key: NumpadSubtract, mods: Control, action: DecreaseFontSize }
