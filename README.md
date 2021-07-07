@@ -32,6 +32,13 @@ pip install ranger-fm
   - reattach-to-user-namespace(for mac)
 - universal-ctags
 
+## Fonts
+
+1. Download lates version of Hack.
+   1. See this page : https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack#quick-installation
+2. Extract the files from the zip file.
+3. Copy them to `~/.local/share/fonts`
+
 ## TODO
 
 1. Write this README.
