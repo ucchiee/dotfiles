@@ -2,3 +2,4 @@ pynvim
 pipenv
 black
 flake8
+pre-commit
