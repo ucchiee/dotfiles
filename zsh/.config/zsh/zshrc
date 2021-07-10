@@ -13,9 +13,6 @@ zsh_add_plugin "hlissner/zsh-autopair"
 zsh_add_plugin "asdf-vm/asdf"  # actually this is not zsh plugin
 # zsh_add_plugin "ucchiee/zsh-pipenv-completion"
 zsh_add_theme "sindresorhus/pure" "zsh_pure"
-# zsh_add_theme "romkatv/powerlevel10k" ""
-# zsh_add_theme "reobin/typewritten" ""
-# zsh_add_theme "spaceship-prompt/spaceship-prompt" ""
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
 
