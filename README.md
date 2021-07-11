@@ -11,16 +11,11 @@ git clone git@github.com:ucchiee/dotfiles.git ~/dotfiles
 stow -d ~/dotfiles --ignore=etc */
 ```
 
-You can also install useful tools.
-
-```sh
-pip install ranger-fm
-```
-
 ## Useful Tools
 
 - alacritty
 - asdf
+- bottom
 - fd
 - fzf
 - lazygit
@@ -67,5 +62,7 @@ brew reinstall font-hack-nerd-font
 ## TODO
 
 1. Write this README.
+   1. Write about zsh and its plugin manager.
+   2. Write about alacritty config (especially about fonts).
 2. Change the image above (too large).
-3. Write install scripts for macOS and Ubuntu.
+3. Make tmux config better and easy to read.
