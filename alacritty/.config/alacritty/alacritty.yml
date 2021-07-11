@@ -38,7 +38,7 @@ font:
     style: Bold
   italic:
     family: "Hack"
-    style: Regular Italic
+    style: Italic
   bold_italic:
     family: "Hack"
     style: Bold Italic
