@@ -3,65 +3,11 @@ function zsh_add_file() {
     [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
 }
 
-function zsh_enable_plugin() {
-    # $1: plugin name
-    zsh_add_file "plugins/$1/$1.plugin.zsh" || \
-    zsh_add_file "plugins/$1/$1.zsh" || \
-    zsh_add_file "plugins/$1/$1.sh"
-}
-
-function zsh_add_plugin() {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-    if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then
-        zsh_enable_plugin $PLUGIN_NAME
-    else
-        git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
-        zsh_enable_plugin $PLUGIN_NAME
-    fi
-}
-
-function zsh_enable_theme() {
-    # $1: theme name
-    # $2: theme config file
-    fpath+="$ZDOTDIR/plugins/$1"
-    SETUP_PATH=$ZDOTDIR/plugins/$1/prompt_$1_setup
-    if [ ! -e $SETUP_PATH ]; then
-        ln -s $(ls $ZDOTDIR/plugins/$1/*.zsh-theme) $SETUP_PATH || \
-        ln -s $(ls $ZDOTDIR/plugins/$1/*.plugin.zsh) $SETUP_PATH || \
-        ln -s $(ls $ZDOTDIR/plugins/$1/*.zsh) $SETUP_PATH
-    fi
-    autoload -U promptinit; promptinit
-    zsh_add_file "$2"
-    prompt "$1"
-}
-
-function zsh_add_theme() {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2 | cut -d "." -f 1)
-    if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then
-        zsh_enable_theme $PLUGIN_NAME $2
-    else
-        git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
-        zsh_enable_theme $PLUGIN_NAME $2
-    fi
-}
-
-function zsh_add_completion() {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-    if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then
-        # For completions
-		completion_file_path=$(ls $ZDOTDIR/plugins/$PLUGIN_NAME/_*)
-		fpath+="$(dirname "${completion_file_path}")"
-        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh"
-    else
-        git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
-		fpath+=$(ls $ZDOTDIR/plugins/$PLUGIN_NAME/_*)
-        [ -f $ZDOTDIR/.zcompdump ] && rm $ZDOTDIR/.zcompdump
-    fi
-	completion_file="$(basename "${completion_file_path}")"
-	if [ "$2" = true ] && compinit "${completion_file:1}"
-}
-
-# Function to show git info on tmux
-function precmd() {
-    [ ! -z $TMUX ] && tmux refresh-client -S
+function yazp_init() {
+  if [ -e "${ZDOTDIR:-"$HOME"}/.yazp/yazp.zsh" ]; then
+    source "$ZDOTDIR/.yazp/yazp.zsh"
+  else
+    git clone https://github.com/ucchiee/yazp "$ZDOTDIR/.yazp"
+    yazp_init
+  fi
 }
