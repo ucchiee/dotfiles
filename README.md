@@ -21,6 +21,7 @@ pip install ranger-fm
 
 - alacritty
 - asdf
+- bottom
 - fd
 - fzf
 - ncdu
