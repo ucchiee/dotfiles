@@ -37,5 +37,7 @@ stow -d ~/dotfiles --ignore=etc */
 ## TODO
 
 1. Write this README.
+   1. Write about zsh and its plugin manager.
+   2. Write about alacritty config (especially about fonts).
 2. Change the image above (too large).
-3. Write install scripts for macOS and Ubuntu.
+3. Make tmux config better and easy to read.
