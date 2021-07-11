@@ -9,6 +9,7 @@ karabiner/.config/karabiner/*auto*
 **.zcompdump**
 **.zcompcache**
 zsh/.config/zsh/*session*
+zsh/.config/zsh/.yazp
 **.zsh_history**
 **plugin**
 **completion**
