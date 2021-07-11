@@ -11,12 +11,6 @@ git clone git@github.com:ucchiee/dotfiles.git ~/dotfiles
 stow -d ~/dotfiles --ignore=etc */
 ```
 
-You can also install useful tools.
-
-```sh
-pip install ranger-fm
-```
-
 ## Useful Tools
 
 - alacritty
