@@ -23,6 +23,8 @@ pip install ranger-fm
 - asdf
 - fd
 - fzf
+- lazygit
+- lazydocker
 - ncdu
 - neovim
 - ranger
@@ -34,10 +36,33 @@ pip install ranger-fm
 
 ## Fonts
 
-1. Download lates version of Hack.
+See the link below for more information.
+
+https://github.com/ryanoasis/nerd-fonts
+
+### Linux
+
+1. Download latest version of Hack.
    1. See this page : https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack#quick-installation
 2. Extract the files from the zip file.
 3. Copy them to `~/.local/share/fonts`
+
+**NOTE**: In Linux these fonts can be specified by `Hack`
+
+### MacOS
+
+```
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+```
+
+If you have installed nerd-fonts, reinstall them like this:
+
+```
+brew reinstall font-hack-nerd-font
+```
+
+**NOTE**: In Linux these fonts can be specified by `Hack Nerd Font`
 
 ## TODO
 
