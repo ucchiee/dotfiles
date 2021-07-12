@@ -4,10 +4,10 @@ function zsh_add_file() {
 }
 
 function yazp_init() {
-  if [ -e "${ZDOTDIR:-"$HOME"}/.yazp/yazp.zsh" ]; then
-    source "$ZDOTDIR/.yazp/yazp.zsh"
-  else
-    git clone https://github.com/ucchiee/yazp "$ZDOTDIR/.yazp"
-    yazp_init
-  fi
+    if [ -e "${ZDOTDIR:-"$HOME"}/.yazp/yazp.zsh" ]; then
+        source "${ZDOTDIR:-"$HOME"}/.yazp/yazp.zsh"
+    else
+        git clone https://github.com/ucchiee/yazp "${ZDOTDIR:-"$HOME"}/.yazp"
+        yazp_init
+    fi
 }
