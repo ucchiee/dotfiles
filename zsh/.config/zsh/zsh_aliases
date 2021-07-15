@@ -1,25 +1,23 @@
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-
 # alias for ls
 alias sl='ls'
 alias l='ls -ltrG'
 alias la='ls -lhaG'
 alias ll='ls -lhG'
 case "$(uname -s)" in
- Darwin)
-   # echo 'Mac OS X'
-  alias ls='ls -G'
-   ;;
- Linux)
-  alias ls='ls --color=auto'
-   ;;
+    Darwin)
+        # echo 'Mac OS X'
+        alias ls='ls -G'
+        ;;
+    Linux)
+        alias ls='ls --color=auto'
+        ;;
 
- CYGWIN*|MINGW32*|MSYS*|MINGW*)
-   # echo 'MS Windows'
-   ;;
- *)
-   # echo 'Other OS'
-   ;;
+    CYGWIN* | MINGW32* | MSYS* | MINGW*)
+        # echo 'MS Windows'
+        ;;
+    *)
+        # echo 'Other OS'
+        ;;
 esac
 
 # alias for cd
@@ -53,7 +51,7 @@ alias pc='pre-commit install&&cp $HOME/.pre-commit-config.yaml .'
 alias dl='lazydocker'
 alias gl='lazygit'
 alias jq.='jq .'
-alias ldk='lazydocker'  # "ld" overwrite ld command.
+alias ldk='lazydocker' # "ld" overwrite ld command.
 alias lg='lazygit'
 alias n.='n .'
 alias n='nvim'
