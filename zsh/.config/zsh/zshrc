@@ -17,7 +17,7 @@ zsh_add_file "zsh_exports"
 # zsh_add_file "zsh_vim_mode"
 zsh_add_file "zsh_aliases"
 zsh_add_file "zsh_comp"
-zsh_add_file "zsh_optns"
+zsh_add_file "zsh_general"
 zsh_add_file "zsh_keybind"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
