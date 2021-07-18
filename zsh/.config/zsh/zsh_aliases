@@ -10,6 +10,8 @@ case "$(uname -s)" in
         ;;
     Linux)
         alias ls='ls --color=auto'
+        alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
+        alias m='cd /mnt'
         ;;
 
     CYGWIN* | MINGW32* | MSYS* | MINGW*)
@@ -29,7 +31,6 @@ alias d='cd ~/dotfiles'
 alias f='cd ~/Code'
 alias j='cd ~/Documents/TokyoTech/jk4/1q'
 alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
-alias m='cd /mnt'
 
 # alias for git
 alias g='git'
@@ -77,4 +78,3 @@ alias jl='jupyter lab'
 alias ggl='open -a google\ chrome'
 alias jk='ssh -ND 1080 titech-computing-room'
 alias jkjk='ssh titech-computing-room'
-alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
