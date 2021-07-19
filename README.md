@@ -15,6 +15,7 @@ stow -d ~/dotfiles --ignore=etc */
 
 - alacritty
 - asdf
+- bat
 - bottom
 - fd
 - fzf
