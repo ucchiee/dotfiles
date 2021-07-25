@@ -2,20 +2,20 @@ import:
   - ~/.config/alacritty/snazzy.yml
   # - ~/.config/alacritty/onedark.yml
 
-background_opacity: 0.90
+background_opacity: 1
 
 font:
   normal:
-    family: "Hack"
+    family: "Hack Nerd Font"
     style: Regular
   bold:
-    family: "Hack"
+    family: "Hack Nerd Font"
     style: Bold
   italic:
-    family: "Hack"
+    family: "Hack Nerd Font"
     style: Italic
   bold_italic:
-    family: "Hack"
+    family: "Hack Nerd Font"
     style: Bold Italic
 
   # Point size
