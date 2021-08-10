@@ -11,5 +11,4 @@ karabiner/.config/karabiner/*auto*
 zsh/.config/zsh/*session*
 zsh/.config/zsh/.yazp
 **.zsh_history**
-**plugin**
 **completion**
