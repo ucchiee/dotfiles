@@ -1,5 +1,6 @@
 import re
-from xkeysnail.transform import *
+
+from xkeysnail.transform import K, define_keymap, set_mark, with_mark
 
 define_keymap(
     lambda wm_class: wm_class not in ("Gnome-terminal", "Alacritty"),
