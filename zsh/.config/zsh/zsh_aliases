@@ -10,7 +10,7 @@ case "$(uname -s)" in
         ;;
     Linux)
         alias ls='ls --color=auto'
-        alias x='xhost +SI:localuser:root;sudo xkeysnail ~/.xkeysnail/config.py'
+        alias x='xhost +SI:localuser:root;sudo xkeysnail --watch ~/.xkeysnail/config.py'
         alias m='cd /mnt'
         ;;
 
