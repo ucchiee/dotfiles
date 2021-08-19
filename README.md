@@ -32,7 +32,7 @@ stow -d ~/dotfiles --ignore=etc */
 
 ## Fonts
 
-See the link below for more information. I recomend you to use `Hack Nerd Font`.
+See the link below for more information. I recommend you to use `Hack Nerd Font`.
 
 https://github.com/ryanoasis/nerd-fonts
 
