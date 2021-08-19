@@ -7,7 +7,7 @@ A collection of the dotfiles I need to remain sane when using \*NIX.
 ## How to install
 
 ```sh
-git clone git@github.com:ucchiee/dotfiles.git ~/dotfiles
+git clone https://github.com/ucchiee/dotfiles ~/dotfiles
 stow -d ~/dotfiles --ignore=etc */
 ```
 
