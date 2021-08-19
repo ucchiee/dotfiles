@@ -12,3 +12,5 @@ zsh/.config/zsh/*session*
 zsh/.config/zsh/.yazp
 **.zsh_history**
 **completion**
+zsh/.config/zsh/plugins**
+ranger/.config/ranger/plugins**
