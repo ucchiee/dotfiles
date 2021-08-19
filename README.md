@@ -32,20 +32,18 @@ stow -d ~/dotfiles --ignore=etc */
 
 ## Fonts
 
-See the link below for more information.
+See the link below for more information. I recomend you to use `Hack Nerd Font`.
 
 https://github.com/ryanoasis/nerd-fonts
 
-### Linux
+### Hack Nerd Font ( Ubuntu )
 
 1. Download latest version of Hack.
    1. See this page : https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack#quick-installation
 2. Extract the files from the zip file.
 3. Copy them to `~/.local/share/fonts`
 
-**NOTE**: In Linux these fonts can be specified by `Hack`
-
-### MacOS
+### Hack Nerd Font ( MacOS )
 
 ```
 brew tap homebrew/cask-fonts
@@ -57,8 +55,6 @@ If you have installed nerd-fonts, reinstall them like this:
 ```
 brew reinstall font-hack-nerd-font
 ```
-
-**NOTE**: In Linux these fonts can be specified by `Hack Nerd Font`
 
 ## TODO
 
