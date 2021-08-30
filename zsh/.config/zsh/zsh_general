@@ -22,4 +22,5 @@ setopt no_beep                # ビープ音を消す
 setopt nonomatch
 
 # Settings for backslash
-[ -f ~/.xkb/mykbd.xkb ] && xkbcomp -I$HOME/.xkb ~/.xkb/mykbd.xkb $DISPLAY 2> /dev/null
+# Might not need this setting
+# [ -f ~/.xkb/mykbd.xkb ] && xkbcomp -I$HOME/.xkb ~/.xkb/mykbd.xkb $DISPLAY 2> /dev/null
