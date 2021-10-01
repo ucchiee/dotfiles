@@ -19,6 +19,7 @@ stow -d ~/dotfiles --ignore=etc */
 - bottom
 - fd
 - fzf
+- git-delta
 - lazygit
 - lazydocker
 - ncdu
