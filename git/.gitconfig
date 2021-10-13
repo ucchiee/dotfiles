@@ -4,8 +4,17 @@
 [init]
   templatedir = ~/.git_templates
 [core]
+  editor = nvim
 [color]
   ui = auto
 [alias]
   tree = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09by"%C(cyan ul)%an%Creset" %x09%C(auto)%s %d'
   ll = log --stat --decorate --find-renames
+[pager]
+  diff = delta
+[include]
+  path = ~/themes.gitconfig
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  features = woolly-mammoth
