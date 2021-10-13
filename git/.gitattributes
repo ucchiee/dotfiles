@@ -13,3 +13,4 @@
 *.sh   diff=bash
 *.tex  diff=tex
 *zsh*  diff=bash
+*.drawio binary
