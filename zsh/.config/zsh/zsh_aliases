@@ -47,9 +47,18 @@ alias gpl='git pull'
 alias gps='git push'
 alias gs='git branch;git status'
 alias gt='git tree'
+alias git-gc-strong='git \
+  -c gc.pruneExpire=now \
+  -c gc.worktreePruneExpire=now \
+  -c gc.reflogExpire=now \
+  -c gc.reflogExpireUnreachable=now \
+  -c gc.rerereResolved=now \
+  -c gc.rerereUnResolved=now \
+  gc --aggressive'
 alias pc='pre-commit install&&cp $HOME/.pre-commit-config.yaml .'
 
 # alias for tools
+alias b='bat'
 alias dl='lazydocker'
 alias gl='lazygit'
 alias jq.='jq .'
