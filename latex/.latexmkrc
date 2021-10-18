@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # LaTeX
-$latex = 'uplatex -synctex=1 -halt-on-error -file-line-error %O %S';
+$latex = 'platex -synctex=1 -halt-on-error -file-line-error %O %S';
 $max_repeat = 5;
 
 # BibTeX
