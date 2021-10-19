@@ -27,6 +27,7 @@ asdf plugin add nodejs
 asdf install
 asdf reshim
 ```
+(Now you can use neovim as well!)
 
 ## Useful Tools
 
