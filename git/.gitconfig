@@ -9,7 +9,7 @@
   ui = auto
 [alias]
   tree = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09by"%C(cyan ul)%an%Creset" %x09%C(auto)%s %d'
-  ll = log --stat --decorate --find-renames
+  l = log --stat --decorate --find-renames
   big = rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objectsize:disk) %(rest)' | grep '^blob' | sort --numeric-sort --key=2
 [pager]
   diff = delta
