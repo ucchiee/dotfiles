@@ -4,11 +4,28 @@ A collection of the dotfiles I need to remain sane when using \*NIX.
 
 ![UIE](./screenshot.png)
 
+## Dependency
+
+- `GNU stow`
+- `git`
+- `zsh`
+
 ## How to install
 
+1. Deploy the files:
 ```sh
 git clone https://github.com/ucchiee/dotfiles ~/dotfiles
 stow -d ~/dotfiles --ignore=etc */
+```
+
+2. Restart your `zsh`
+
+3. Enable Python and Nodejs using asdf:
+```
+asdf plugin add python
+asdf plugin add nodejs
+asdf install
+asdf reshim
 ```
 
 ## Useful Tools
