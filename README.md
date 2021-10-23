@@ -20,14 +20,14 @@ stow -d ~/dotfiles --ignore=etc */
 
 2. Restart your `zsh`
 
-3. Enable Python and Nodejs using asdf:
+3. (Optional) Enable Python and Nodejs using asdf:
 ```
 asdf plugin add python
 asdf plugin add nodejs
 asdf install
 asdf reshim
 ```
-(Now you can use neovim as well!)
+(Now you can use neovim as well !)
 
 ## Useful Tools
 
