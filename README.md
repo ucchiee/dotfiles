@@ -79,6 +79,4 @@ brew reinstall font-hack-nerd-font
 
 1. Write this README.
    1. Write about zsh and its plugin manager.
-   2. Write about alacritty config (especially about fonts).
-2. Change the image above (too large).
-3. Make tmux config better and easy to read.
+1. Make tmux config better and easy to read.
