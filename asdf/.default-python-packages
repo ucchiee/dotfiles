@@ -4,3 +4,5 @@ black
 flake8
 pre-commit
 isort
+cmakelang
+cmake-language-server
