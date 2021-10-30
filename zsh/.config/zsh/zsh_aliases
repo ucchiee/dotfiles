@@ -12,6 +12,7 @@ case "$(uname -s)" in
         alias ls='ls --color=auto'
         alias x='xhost +SI:localuser:root;sudo xkeysnail --watch ~/.xkeysnail/config.py'
         alias m='cd /mnt'
+        alias open='xdg-open'
         ;;
 
     CYGWIN* | MINGW32* | MSYS* | MINGW*)
