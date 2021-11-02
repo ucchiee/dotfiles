@@ -1,8 +1,9 @@
-pynvim
-pipenv
 black
-flake8
-pre-commit
-isort
-cmakelang
 cmake-language-server
+cmakelang
+flake8
+isort
+mypy
+pipenv
+pre-commit
+pynvim
