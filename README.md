@@ -44,6 +44,7 @@ asdf reshim
 - neovim
 - ranger
 - ripgrep
+- ripgrep-all
 - silversearcher-ag
 - tmux
   - reattach-to-user-namespace(for mac)
