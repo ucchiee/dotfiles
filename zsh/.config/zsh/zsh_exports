@@ -2,7 +2,10 @@ HISTSIZE=99999
 HISTFILESIZE=99999
 SAVEHIST=$HISTSIZE
 export HISTFILE=${ZDOTDIR}/.zsh_history
-export PATH="$HOME/bin":$PATH
+if [ ! -z "$UCCHIEE_PATH" ]; then
+    export PATH="$HOME/bin":$PATH
+    export UCHIEE_PATH="exported"
+fi
 export LANG=en_US.utf8
 # export MANPAGER='nvim +Man!'
 # export MANWIDTH=999
