@@ -60,3 +60,6 @@ noremap <Leader>N Nzz
 " better command line filtering
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+set nocompatible
+filetype plugin on
