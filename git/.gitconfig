@@ -12,6 +12,7 @@
   l = log --stat --decorate --find-renames
   big = ! git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objectsize:disk) %(rest)' | grep '^blob' | sort --numeric-sort --key=2
   git = ! git
+  praise = blame
 [pager]
   diff = delta
 [include]
