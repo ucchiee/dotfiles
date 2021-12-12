@@ -3,7 +3,7 @@ import re
 from xkeysnail.transform import K, define_keymap, set_mark, with_mark
 
 define_keymap(
-    lambda wm_class: wm_class not in ("Gnome-terminal", "Alacritty"),
+    lambda wm_class: wm_class not in ("Gnome-terminal", "Alacritty", "kitty"),
     {
         # cousor
         K("LC-A"): with_mark(K("home")),
