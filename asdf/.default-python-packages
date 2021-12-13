@@ -7,3 +7,4 @@ mypy
 pipenv
 pre-commit
 pynvim
+neovim-remote
