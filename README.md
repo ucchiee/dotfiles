@@ -13,6 +13,7 @@ A collection of the dotfiles I need to remain sane when using \*NIX.
 ## How to install
 
 1. Deploy the files:
+
 ```sh
 git clone https://github.com/ucchiee/dotfiles ~/dotfiles
 stow -d ~/dotfiles --ignore=etc */
@@ -21,12 +22,14 @@ stow -d ~/dotfiles --ignore=etc */
 2. Restart your `zsh`
 
 3. (Optional) Enable Python and Nodejs using asdf:
+
 ```
 asdf plugin add python
 asdf plugin add nodejs
 asdf install
 asdf reshim
 ```
+
 (Now you can use neovim as well !)
 
 ## Useful Tools
@@ -74,6 +77,16 @@ If you have installed nerd-fonts, reinstall them like this:
 
 ```
 brew reinstall font-hack-nerd-font
+```
+
+## OS specific setting
+
+### MacOS
+
+Speeds up key repeat:
+
+```
+defaults write -g KeyRepeat -int 1.3
 ```
 
 ## TODO
