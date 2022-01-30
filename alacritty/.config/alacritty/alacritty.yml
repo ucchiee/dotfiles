@@ -1,8 +1,7 @@
 import:
   - ~/.config/alacritty/snazzy.yml
   # - ~/.config/alacritty/onedark.yml
-
-background_opacity: 1
+  # - ~/.config/alacritty/kanagawa.yml
 
 font:
   normal:
