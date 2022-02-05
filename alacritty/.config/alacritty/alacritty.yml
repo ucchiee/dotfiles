@@ -1,7 +1,8 @@
 import:
-  - ~/.config/alacritty/snazzy.yml
+  # - ~/.config/alacritty/snazzy.yml
   # - ~/.config/alacritty/onedark.yml
   # - ~/.config/alacritty/kanagawa.yml
+  - ~/.config/alacritty/onenord.yml
 
 font:
   normal:
@@ -33,6 +34,7 @@ window:
     y: 1
   decolations: none
   startup_mode: Maximized
+  opacity: 1
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
