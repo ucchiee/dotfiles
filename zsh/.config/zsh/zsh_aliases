@@ -8,7 +8,8 @@ case "$(uname -s)" in
         # echo 'Mac OS X'
         alias ls='ls -G'
         alias o='open'
-        alias x64='arch -x86_64'
+        alias x='arch -x86_64'
+        alias a='arch -arm64'
         ;;
     Linux)
         alias ls='ls --color=auto'
