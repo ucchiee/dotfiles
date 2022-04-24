@@ -4,8 +4,10 @@ export ZDOTDIR=$HOME/.config/zsh
 # [ -e "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 # arch specific settings
-if [ "$(uname -m)" = "arm64" ]; then
+ARCH=$(uname -m)
+echo "Current Architecture: $ARCH"
+if [ $ARCH = "arm64" ]; then
   [ -e "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 else
-  eval "$(/usr/local/bin/brew shellenv)"
+  [ -e "/usr/local/bin/brew" ] && eval "$(/usr/local/bin/brew shellenv)"
 fi
