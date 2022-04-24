@@ -63,6 +63,7 @@ alias git-gc-strong='git \
 alias pc='pre-commit install&&cp $HOME/.pre-commit-config.yaml .'
 
 # alias for tools
+alias u='uname -m'
 alias b='bat'
 alias dl='lazydocker'
 alias gl='lazygit'
