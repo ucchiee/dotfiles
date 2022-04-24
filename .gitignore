@@ -16,3 +16,4 @@ zsh/.config/zsh/plugins**
 ranger/.config/ranger/plugins**
 
 tmux/.config/tmux/plugins/*
+bin/bin/clang*
