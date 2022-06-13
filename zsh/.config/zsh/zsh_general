@@ -20,6 +20,9 @@ setopt hist_ignore_all_dups   # 同じコマンドをヒストリに残さない
 setopt auto_cd                # ディレクトリ名だけでcdする
 setopt no_beep                # ビープ音を消す
 setopt nonomatch
+setopt autopushd
+
+precmd() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Settings for backslash
 # Might not need this setting
