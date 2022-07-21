@@ -10,6 +10,9 @@ case "$(uname -s)" in
         alias o='open'
         alias x='arch -x86_64'
         alias a='arch -arm64'
+        # alias for changing arch
+        alias arm="exec arch -arch arm64e /bin/zsh"
+        alias x64="exec arch -arch x86_64 /bin/zsh"
         ;;
     Linux)
         alias ls='ls --color=auto'
@@ -27,14 +30,10 @@ case "$(uname -s)" in
         ;;
 esac
 
-# alias for changing arch
-alias arm="exec arch -arch arm64e /bin/zsh --login"
-alias x64="exec arch -arch x86_64 /bin/zsh --login"
-
 # alias for cd
 alias pd='pushd >/dev/null 2>&1'
 alias ...='cd ../../'
-alias ..='popd >/dev/null 2>&1|| cd ..'
+alias ..='cd ..'
 alias c='cd ~/'
 alias d='cd ~/dotfiles'
 alias f='cd ~/Code'
@@ -96,6 +95,6 @@ alias G='grep'
 alias his='history -E -i 1 | fzf'
 alias jn='jupyter notebook'
 alias jl='jupyter lab'
-alias ggl='open -a google\ chrome'
+alias ggl='open -a brave\ browser'
 alias jk='ssh -ND 1080 titech-computing-room'
 alias jkjk='ssh titech-computing-room'
