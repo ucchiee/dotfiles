@@ -23,7 +23,7 @@ set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 " set laststatus=0                        " Always display the status line
 set number                              " Line numbers
-set relativenumber
+" set relativenumber
 " set showtabline=2                       " Always show tabs
 " set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
@@ -57,6 +57,7 @@ nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
+noremap <Leader>w :w<CR>
 " better command line filtering
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
