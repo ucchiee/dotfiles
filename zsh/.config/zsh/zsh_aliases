@@ -13,6 +13,8 @@ case "$(uname -s)" in
         # alias for changing arch
         alias arm="exec arch -arch arm64e /bin/zsh"
         alias x64="exec arch -arch x86_64 /bin/zsh"
+        alias sed="gsed"
+        alias find="gfind"
         ;;
     Linux)
         alias ls='ls --color=auto'
@@ -88,6 +90,7 @@ alias z='fzf'
 # alias for zsh
 alias zshtime='for for i in $(seq 1 10); do time zsh -i -c exit; done'
 alias init='source $ZDOTDIR/zsh_env_lazy'
+alias reload_zshrc='source ~/.config/zsh/.zshrc'
 
 # other useful alias
 alias grep='grep --color=auto'
@@ -98,3 +101,4 @@ alias jl='jupyter lab'
 alias ggl='open -a brave\ browser'
 alias jk='ssh -ND 1080 titech-computing-room'
 alias jkjk='ssh titech-computing-room'
+alias kssh='kitty +kitten ssh'
