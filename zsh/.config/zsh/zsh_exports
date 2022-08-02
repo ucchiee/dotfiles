@@ -8,7 +8,7 @@ WORDCHARS=${WORDCHARS//\/}
 # export MANWIDTH=999
 
 # -- some hacks to use both arm and x64 version of brew --
-export PATH="$HOME/bin":/usr/local/go/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH="$HOME/bin/bin":"$HOME/bin":/usr/local/go/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$PATH
 
 if (( $+commands[sw_vers] )) && (( $+commands[arch] )); then
 	[[ -x /usr/local/bin/brew ]] && alias brew="arch -arch x86_64 /usr/local/bin/brew"
