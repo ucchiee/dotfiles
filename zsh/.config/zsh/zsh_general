@@ -22,7 +22,7 @@ setopt no_beep                # ビープ音を消す
 setopt nonomatch
 setopt autopushd
 
-precmd() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+# precmd() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Settings for backslash
 # Might not need this setting
