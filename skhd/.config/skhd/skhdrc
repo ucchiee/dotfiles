@@ -39,7 +39,7 @@ alt - d : yabai -m space --destroy
 # move focused window to the newly created space
 alt - m : yabai -m space --create && UCH_TEMP=$(yabai -m query --spaces --display | jq '.[].index' | tail -n 1) && yabai -m window --space ${UCH_TEMP} && yabai -m space --focus ${UCH_TEMP}
 # reverse sommand of the above
-shift + alt - m : [ $(yabai -m query --windows --space | jq '.[].index' | wc -l) -eq 1 ] && yabai -m window --space $(yabai -m query --spaces --display recent | jq '.[].index' | tail -n 1) && yabai -m space --destroy
+shift + alt - m : [ $(yabai -m query --windows --space | jq '.[].index' | wc -l) -eq 1 ] && yabai -m window --space $(yabai -m query --spaces --display | jq '.[].index' | tail -n 1) && yabai -m space --destroy
 # rotate tree
 alt - r : yabai -m space --rotate 90
 # mirror tree y-axis
