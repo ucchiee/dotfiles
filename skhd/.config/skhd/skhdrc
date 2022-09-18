@@ -1,10 +1,8 @@
 # focus window
-alt - h: yabai -m window --focus west  || yabai -m display --focus west  || yabai -m window --focus east  || yabai -m display --focus east
-alt - l: yabai -m window --focus east  || yabai -m display --focus east  || yabai -m window --focus west  || yabai -m display --focus west
-alt - j: yabai -m window --focus south || yabai -m display --focus south || yabai -m window --focus north || yabai -m display --focus north
-alt - k: yabai -m window --focus north || yabai -m display --focus north || yabai -m window --focus south || yabai -m display --focus south
-alt - n: yabai -m window --focus next  || yabai -m display --focus next
-alt - p: yabai -m window --focus prev  || yabai -m display --focus prev
+alt - h: yabai -m window --focus west  || yabai -m display --focus west
+alt - l: yabai -m window --focus east  || yabai -m display --focus east
+alt - j: yabai -m window --focus south || yabai -m display --focus south
+alt - k: yabai -m window --focus north || yabai -m display --focus north
 # swap window
 shift + alt - x : yabai -m window --swap recent
 shift + alt - h : yabai -m window --swap west
@@ -26,6 +24,22 @@ shift + alt - up    : yabai -m window --resize top:0:-50   || yabai -m window --
 shift + alt - down  : yabai -m window --resize bottom:0:50 || yabai -m window --resize top:0:50
 shift + alt - right : yabai -m window --resize right:50:0  || yabai -m window --resize left:50:0
 shift + alt - left  : yabai -m window --resize left:-50:0  || yabai -m window --resize right:-50:0
+# move focus of space
+alt - n : yabai -m space --focus next
+alt - p : yabai -m space --focus prev
+# move spaces
+shift + alt - n : yabai -m space --move next
+shift + alt - p : yabai -m space --move prev
+# balance window
+alt - b : yabai -m space --balance
+# create a new space and move focus to it
+alt - c : yabai -m space --create && yabai -m space --focus last
+# delete focused space
+alt - d : yabai -m space --destroy
+# move focused window to the newly created space
+alt - m : yabai -m space --create && UCH_TEMP=$(yabai -m query --spaces --display | jq '.[].index' | tail -n 1) && yabai -m window --space ${UCH_TEMP} && yabai -m space --focus ${UCH_TEMP}
+# reverse sommand of the above
+shift + alt - m : [ $(yabai -m query --windows --space | jq '.[].index' | wc -l) -eq 1 ] && yabai -m window --space $(yabai -m query --spaces --display recent | jq '.[].index' | tail -n 1) && yabai -m space --destroy
 # rotate tree
 alt - r : yabai -m space --rotate 90
 # mirror tree y-axis
@@ -41,5 +55,5 @@ shift + alt - f : yabai -m window --toggle native-fullscreen
 # toggle window split type
 alt - e : yabai -m window --toggle split
 # float / unfloat window and restore position
-# alt - t : yabai -m window --toggle float && /tmp/yabai-restore/$(yabai -m query --windows --window | jq -re '.id').restore 2>/dev/null || true
-alt - t : yabai -m window --toggle float && yabai -m window --grid 4:4:1:1:2:2
+alt - t : yabai -m window --toggle float && /tmp/yabai-restore/$(yabai -m query --windows --window | jq -re '.id').restore 2>/dev/null || true
+# alt - t : yabai -m window --toggle float && yabai -m window --grid 4:4:1:1:2:2
