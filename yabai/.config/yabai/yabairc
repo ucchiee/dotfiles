@@ -18,11 +18,11 @@ yabai -m config layout bsp
 # New window spawns to the right if vertical split, or bottom if horizontal split
 yabai -m config window_placement second_child
 
-# Set all padding and gaps to 20pt (default: 0)
-yabai -m config top_padding    5
-yabai -m config bottom_padding 5
-yabai -m config left_padding   5
-yabai -m config right_padding  5
+# Set paddings and gaps
+yabai -m config top_padding    3
+yabai -m config bottom_padding 3
+yabai -m config left_padding   3
+yabai -m config right_padding  3
 yabai -m config window_gap     10
 
 # Override gaps for space 2 only
@@ -51,7 +51,7 @@ yabai -m config focus_follows_mouse autoraise
 yabai -m config mouse_follows_focus on
 
 # floating windows are always on top (default: off)
-yabai -m config window_topmost off  # TODO: Check thisk settings.
+yabai -m config window_topmost on  # TODO: Check thisk settings.
 
 # modify window shadows (default: on, options: on, off, float)
 # example: show shadows only for floating windows
