@@ -6,20 +6,18 @@ A collection of the dotfiles I need to remain sane when using \*NIX.
 
 ## Dependency
 
-- `GNU stow`
+- `python`
 - `git`
-- `zsh`
 
 ## How to install
 
 1. Deploy the files:
 
 ```sh
-git clone https://github.com/ucchiee/dotfiles ~/dotfiles
-stow -d ~/dotfiles --ignore=etc */
+git clone https://github.com/ucchiee/dotfiles ~/dotfiles && cd ~/dotfiles && ./install
 ```
 
-2. Restart your `zsh`
+2. Restart your `zsh` (if you're using `zsh`).
 
 3. (Optional) Enable Python and Nodejs using asdf:
 
