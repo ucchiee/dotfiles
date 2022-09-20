@@ -1,0 +1,39 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.clang-format: clang-format/.clang-format
+    ~/.default-npm-packages: asdf/.default-npm-packages
+    ~/.default-python-packages: asdf/.default-python-packages
+    ~/.git_templates: git/.git_templates
+    ~/.gitattributes: git/.gitattributes
+    ~/.gitconfig: git/.gitconfig
+    ~/.ideavimrc: vim/.ideavimrc
+    ~/.latexmkrc: latex/.latexmkrc
+    ~/.pre-commit-config.yaml: pre-commit/.pre-commit-config.yaml
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.tool-versions: asdf/.tool-versions
+    ~/.uncrustify: uncrustify/.uncrustify
+    ~/.vimrc: vim/.vimrc
+    ~/.xkeysnail: xkeysnail/.xkeysnail
+    ~/.zprofile: zsh/.zprofile
+    ~/.zshenv: zsh/.zshenv
+    ~/bin: bin/bin
+    ~/quefrency_rev__4.json: etc/quefrency_rev__4.json
+    ~/simple.vimrc: vim/simple.vimrc
+    ~/themes.gitconfig: git/themes.gitconfig
+    ~/zsh-my-theme.sh: zsh/zsh-my-theme.sh
+
+    ~/.config/kitty: kitty/.config/kitty
+    ~/.config/alacritty: alacritty/.config/alacritty
+    ~/.config/git: git/.config/git
+    ~/.config/karabiner: karabiner/.config/karabiner
+    ~/.config/ranger: ranger/.config/ranger
+    ~/.config/skhd: skhd/.config/skhd
+    ~/.config/tmux: tmux/.config/tmux
+    ~/.config/yabai: yabai/.config/yabai
+    ~/.config/zsh: zsh/.config/zsh
