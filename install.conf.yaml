@@ -37,3 +37,8 @@
     ~/.config/tmux: tmux/.config/tmux
     ~/.config/yabai: yabai/.config/yabai
     ~/.config/zsh: zsh/.config/zsh
+
+    # New files after dotbot is installed
+    ~/.hammerspoon:
+        if: '[ `uname` = Darwin ]'
+        path: hammerspoon
