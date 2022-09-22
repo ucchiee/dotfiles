@@ -48,7 +48,7 @@ yabai -m config mouse_action2 resize
 yabai -m config focus_follows_mouse autoraise
 
 # set mouse follows focus mode (default: off)
-yabai -m config mouse_follows_focus on
+yabai -m config mouse_follows_focus off
 
 # floating windows are always on top (default: off)
 yabai -m config window_topmost on  # TODO: Check thisk settings.
