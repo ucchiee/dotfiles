@@ -31,7 +31,9 @@
     ~/.config/kitty: kitty/.config/kitty
     ~/.config/alacritty: alacritty/.config/alacritty
     ~/.config/git: git/.config/git
-    ~/.config/karabiner: karabiner/.config/karabiner
+    ~/.config/karabiner: 
+        if: '[ `uname` = Darwin ]'
+        path: karabiner/.config/karabiner
     ~/.config/ranger: ranger/.config/ranger
     ~/.config/skhd: skhd/.config/skhd
     ~/.config/tmux: tmux/.config/tmux
