@@ -19,10 +19,10 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # Set paddings and gaps
-yabai -m config top_padding    3
-yabai -m config bottom_padding 3
-yabai -m config left_padding   3
-yabai -m config right_padding  3
+yabai -m config top_padding    0
+yabai -m config bottom_padding 0
+yabai -m config left_padding   0
+yabai -m config right_padding  0
 yabai -m config window_gap     10
 
 # Override gaps for space 2 only
