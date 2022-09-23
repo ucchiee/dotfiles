@@ -5,6 +5,7 @@ export HISTFILE=${HOME}/.zsh_history
 export LANG=en_US.utf8
 export FZF_DEFAULT_OPTS='--layout=reverse --border'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+export BAT_CONFIG_PATH="${HOME}/.config/bat/config"
 WORDCHARS=${WORDCHARS//\/}
 # export MANPAGER='nvim +Man!'
 # export MANWIDTH=999

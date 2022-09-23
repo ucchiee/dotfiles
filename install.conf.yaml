@@ -45,4 +45,4 @@
         if: '[ `uname` = Darwin ]'
         path: hammerspoon
     ~/.ripgreprc: ripgrep/.ripgreprc
-    ~/.config/bat/config: bat/bat.conf
+    ~/.config/bat/config: bat/bat.conf  # ref) zsh_export
