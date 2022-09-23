@@ -44,3 +44,5 @@
     ~/.hammerspoon:
         if: '[ `uname` = Darwin ]'
         path: hammerspoon
+    ~/.ripgreprc: ripgrep/.ripgreprc
+    ~/.config/bat/config: bat/bat.conf
