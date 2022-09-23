@@ -17,5 +17,10 @@ IFS=: read -ra selected < <(
       --preview 'bat --color=always {1} --highlight-line {2}' \
       --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'
 )
-# [ -n "${selected[0]}" ] && vim "${selected[0]}" "+${selected[1]}"
-[ -n "${selected[0]}" ] && echo ${selected[0]}
+if [ -n "${selected[0]}" ]; then
+  if [ `uname` = "Darwin" ]; then
+    echo ${selected[0]} | tee /dev/tty | pbcopy
+  elif [ `uname` = "Linux" ]; then
+    echo ${selected[0]} | tee /dev/tty | xsel --clipboard --input
+  fi
+fi
