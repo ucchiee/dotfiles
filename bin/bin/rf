@@ -19,8 +19,10 @@ IFS=: read -ra selected < <(
 )
 if [ -n "${selected[0]}" ]; then
   if [ `uname` = "Darwin" ]; then
-    echo ${selected[0]} | tee /dev/tty | pbcopy
+    echo -n ${selected[0]} | pbcopy
+    echo -n ${selected[0]}
   elif [ `uname` = "Linux" ]; then
-    echo ${selected[0]} | tee /dev/tty | xsel --clipboard --input
+    echo -n ${selected[0]} | xsel --clipboard --input
+    echo -n ${selected[0]}
   fi
 fi
