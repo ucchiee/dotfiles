@@ -62,3 +62,14 @@ yabai -m config window_shadow float
 yabai -m config window_opacity on
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.9
+
+# applications with custom rules
+applications="(Calendar|Mail|Reminders|Notes|Microsoft Outlook|Discord|Messages|Slack|Firefox|Chrome|Code|Microsoft Word|Preview|Terminal|iTerm2|QuickTime|Player|Spotify|Music|Brave Browser|Kitty|Alacritty|Trello)"
+
+# NOTE: you need to set the settings for the applications in the 
+#       list first, or else they don't apply properly and you can end up with
+#       some weird border/float/window behaviours
+
+# everything listed gets sent to below layer to prevent 
+# them from covering floating applications/popup windows
+yabai -m rule --add app="^${applications}$"    manage=on layer=below
