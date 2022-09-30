@@ -19,10 +19,10 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # Set paddings and gaps
-yabai -m config top_padding    0
-yabai -m config bottom_padding 0
-yabai -m config left_padding   0
-yabai -m config right_padding  0
+yabai -m config top_padding    5
+yabai -m config bottom_padding 5
+yabai -m config left_padding   5
+yabai -m config right_padding  5
 yabai -m config window_gap     10
 
 # Override gaps for space 2 only
@@ -60,8 +60,8 @@ yabai -m config window_shadow float
 # window opacity (default: off)
 # example: render all unfocused windows with 90% opacity
 yabai -m config window_opacity on
-yabai -m config active_window_opacity 1.0
-yabai -m config normal_window_opacity 0.9
+yabai -m config active_window_opacity 0.9
+yabai -m config normal_window_opacity 0.8
 
 # applications with custom rules
 applications="(Calendar|Mail|Reminders|Notes|Microsoft Outlook|Discord|Messages|Slack|Firefox|Chrome|Code|Microsoft Word|Preview|Terminal|iTerm2|QuickTime|Player|Spotify|Music|Brave Browser|Kitty|Alacritty|Trello)"
@@ -73,3 +73,9 @@ applications="(Calendar|Mail|Reminders|Notes|Microsoft Outlook|Discord|Messages|
 # everything listed gets sent to below layer to prevent 
 # them from covering floating applications/popup windows
 yabai -m rule --add app="^${applications}$"    manage=on layer=below
+
+# yabai black/stick list
+black_list="(System Preferences|Alfred Preferences|Archive Utility)"
+yabai -m rule --add app="^${black_list}$" manage=off layer=below
+stick_list="(Digital Color Meter|Calculator)"
+yabai -m rule --add app="^${stick_list}$" manage=off sticky=on
