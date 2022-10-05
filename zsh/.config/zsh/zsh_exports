@@ -12,7 +12,7 @@ WORDCHARS=${WORDCHARS//\/}
 
 # -- some hacks to use both arm and x64 version of brew --
 export PATH=\
-"$HOME/bin/nvim-macos/bin":\
+"$HOME/bin/nvim08/bin":\
 "$HOME/bin":\
 $HOME/.cargo/bin:\
 /usr/local/go/bin:\
