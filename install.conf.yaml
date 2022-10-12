@@ -23,7 +23,6 @@
     ~/.zprofile: zsh/.zprofile
     ~/.zshenv: zsh/.zshenv
     ~/bin: bin/bin
-    ~/simple.vimrc: vim/simple.vimrc
     ~/themes.gitconfig: git/themes.gitconfig
 
     ~/.config/kitty: kitty/.config/kitty
