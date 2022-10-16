@@ -61,7 +61,7 @@ yabai -m config window_shadow on
 # example: render all unfocused windows with 90% opacity
 yabai -m config window_opacity on
 yabai -m config active_window_opacity 1.0
-yabai -m config normal_window_opacity 0.8
+yabai -m config normal_window_opacity 1.0
 
 # applications with custom rules
 applications="(Calendar|Mail|Reminders|Notes|Microsoft Outlook|Discord|Messages|Slack|Firefox|Chrome|Code|Microsoft Word|Preview|Terminal|iTerm2|QuickTime|Player|Spotify|Music|Brave Browser|Kitty|Alacritty|Trello)"
