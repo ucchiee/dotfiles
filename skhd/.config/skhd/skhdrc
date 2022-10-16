@@ -25,8 +25,8 @@ shift + alt - left  : yabai -m window --resize left:-50:0  || yabai -m window --
 alt - n : yabai -m window --space next; yabai -m space --focus next
 alt - p : yabai -m window --space prev; yabai -m space --focus prev
 # send window to monitor and follow focus
-shift + alt - p : yabai -m window --display next; yabai -m display --focus next
-shift + alt - n : yabai -m window --display prev; yabai -m display --focus prev
+shift + alt - n : yabai -m window --display next; yabai -m display --focus next
+shift + alt - p : yabai -m window --display prev; yabai -m display --focus prev
 # balance window
 alt - 0 : yabai -m space --balance
 # create a new space and move focus to it
@@ -71,5 +71,9 @@ shift + alt - 7 : yabai -m window --space 7; yabai -m space --focus 7
 shift + alt - 8 : yabai -m window --space 8; yabai -m space --focus 8
 shift + alt - 9 : yabai -m window --space 9; yabai -m space --focus 9
 
-# restart yabai
+# restart yabai/skhd
 ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"; skhd --reload
+# quit yabai
+ctrl + alt + cmd - q : brew services stop yabai
+# start yabai
+ctrl + alt + cmd - s : brew services start yabai
