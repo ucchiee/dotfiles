@@ -8,3 +8,4 @@ pipenv
 pre-commit
 pynvim
 neovim-remote
+debugpy
