@@ -42,3 +42,4 @@
         path: hammerspoon
     ~/.ripgreprc: ripgrep/.ripgreprc
     ~/.config/bat/config: bat/bat.conf  # ref) zsh_export
+    ~/.bashrc: bash/bashrc
