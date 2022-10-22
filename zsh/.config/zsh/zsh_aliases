@@ -15,6 +15,7 @@ case "$(uname -s)" in
         alias x64="exec arch -arch x86_64 /bin/zsh"
         alias sed="gsed"
         alias find="gfind"
+        alias mp="multipass"
         ;;
     Linux)
         alias inst_logger="/home/uu/Code/mine/inst_logger/pin-3.20-98437-gf02b61307-gcc-linux/pin -t /home/uu/Code/mine/inst_logger/src/obj-intel64/inst_logger.so"
