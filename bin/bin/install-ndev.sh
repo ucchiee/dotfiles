@@ -12,7 +12,7 @@ case "$(uname -s)" in
     wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
     rm -rf nvim-linux nvim-dev
     tar xvzf nvim-linux64.tar.gz
-    mv ./nvim-linux ./nvim-dev
+    mv ./nvim-linux64 ./nvim-dev
     rm nvim-linux64.tar.gz
   ;;
   *) echo "Not supported OS type"
