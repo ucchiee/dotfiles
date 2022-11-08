@@ -8,7 +8,7 @@ yazp plug "zsh-users/zsh-syntax-highlighting"
 yazp plug "hlissner/zsh-autopair"
 yazp plug "asdf-vm/asdf" "asdf.sh" # actually this is not zsh plugin
 yazp plug "zsh-users/zsh-completions"
-yazp theme "sindresorhus/pure" "zsh_pure"
+yazp theme "ucchiee/pure" "zsh_pure"
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
 
