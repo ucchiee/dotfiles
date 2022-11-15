@@ -25,4 +25,5 @@ bin/bin/share
 
 bin/bin/nvim-macos
 bin/bin/nvim-dev
-bin/bin/nvim08
+bin/bin/ndev
+bin/bin/nvim
