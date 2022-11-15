@@ -1,6 +1,7 @@
 bin/bin/chromedriver
 bin/bin/spin_check
 bin/bin/lazygit
+bin/bin/nvim*
 karabiner/.config/karabiner/assets
 karabiner/.config/karabiner/*auto*
 
@@ -22,3 +23,7 @@ bin/bin/nvim-dev
 bin/bin/nvim-stable
 bin/bin/ndev
 bin/bin/nvim
+bin/bin/shfmt
+bin/bin/stylua
+bin/bin/checksec.sh
+bin/bin/checksec
