@@ -18,12 +18,7 @@ ranger/.config/ranger/plugins**
 tmux/.config/tmux/plugins/*
 bin/bin/clang*
 
-bin/bin/bin
-bin/bin/lib
-bin/bin/neovim
-bin/bin/share
-
-bin/bin/nvim-macos
 bin/bin/nvim-dev
+bin/bin/nvim-stable
 bin/bin/ndev
 bin/bin/nvim
