@@ -2,7 +2,7 @@ HISTSIZE=99999
 HISTFILESIZE=99999
 SAVEHIST=$HISTSIZE
 export HISTFILE=${HOME}/.zsh_history
-export LANG=en_US.utf8
+export LANG=en_US.UTF-8
 export FZF_DEFAULT_OPTS='--layout=reverse --border'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export BAT_CONFIG_PATH="${HOME}/.config/bat/config"
