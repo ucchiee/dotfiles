@@ -13,7 +13,9 @@ WORDCHARS=${WORDCHARS//\/}
 
 # -- some hacks to use both arm and x64 version of brew --
 export PATH=\
+"$HOME/Code/repos/llvm-project/build15/bin":\
 "$HOME/bin":\
+"$HOME/localbin/bin":\
 $HOME/.cargo/bin:\
 /usr/local/go/bin:\
 "$HOME/go/bin":\
@@ -22,6 +24,7 @@ $HOME/.cargo/bin:\
 /usr/local/bin:\
 /usr/local/sbin:\
 $PATH
+export LD_LIBRARY_PATH=$HOME/Code/repos/llvm-project/build15/lib:$LD_LIBRARY_PATH
 
 if (( $+commands[sw_vers] )) && (( $+commands[arch] )); then
 	[[ -x /usr/local/bin/brew ]] && alias brew="arch -arch x86_64 /usr/local/bin/brew"
