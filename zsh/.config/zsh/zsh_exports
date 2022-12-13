@@ -6,7 +6,7 @@ export LANG=en_US.UTF-8
 export FZF_DEFAULT_OPTS='--layout=reverse --border'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export BAT_CONFIG_PATH="${HOME}/.config/bat/config"
-export PIN_ROOT="/home/uu/Code/lab/spectaint/pin-3.25-98650-g8f6168173-gcc-linux"
+export PIN_ROOT="$HOME/Code/lab/spectaint/pin-3.25-98650-g8f6168173-gcc-linux"
 WORDCHARS=${WORDCHARS//\/}
 # export MANPAGER='nvim +Man!'
 # export MANWIDTH=999
