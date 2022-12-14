@@ -105,3 +105,8 @@ alias ggl='open -a brave\ browser'
 alias jk='ssh -ND 1080 titech-computing-room'
 alias jkjk='ssh titech-computing-room'
 alias kssh='kitty +kitten ssh'
+
+# CC and CXX variable
+alias set_cc_cxx='\
+export CC=$HOME/Code/repos/llvm-project/build15-rt/bin/clang;\
+export CXX=$HOME/Code/repos/llvm-project/build15-rt/bin/clang++'
