@@ -13,7 +13,7 @@ WORDCHARS=${WORDCHARS//\/}
 
 # -- some hacks to use both arm and x64 version of brew --
 export PATH=\
-"$HOME/Code/repos/llvm-project/build15/bin":\
+"$HOME/Code/repos/llvm-project/build15-rt/bin":\
 "$HOME/bin":\
 "$HOME/localbin/bin":\
 $HOME/.cargo/bin:\
@@ -24,7 +24,17 @@ $HOME/.cargo/bin:\
 /usr/local/bin:\
 /usr/local/sbin:\
 $PATH
-export LD_LIBRARY_PATH=$HOME/Code/repos/llvm-project/build15/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$HOME/Code/repos/llvm-project/build15-rt/lib
+
+# M1Mac-specific settings
+if [[ "$(uname -s)" == Darwin ]]; then
+  # To find library include path
+  # See: https://github.com/llvm/llvm-project/issues/45225
+  export SDKROOT=$(xcrun --show-sdk-path)
+  # To use ASAN
+  # See: https://stackoverflow.com/questions/64126942/malloc-nano-zone-abandoned-due-to-inability-to-preallocate-reserved-vm-space
+  export MallocNanoZone=0
+fi
 
 if (( $+commands[sw_vers] )) && (( $+commands[arch] )); then
 	[[ -x /usr/local/bin/brew ]] && alias brew="arch -arch x86_64 /usr/local/bin/brew"
