@@ -112,4 +112,4 @@ export CC=$HOME/Code/repos/llvm-project/build15-rt/bin/clang;\
 export CXX=$HOME/Code/repos/llvm-project/build15-rt/bin/clang++'
 alias clear_cc_cxx='\
 export CC=;\
-export CXX=
+export CXX='
