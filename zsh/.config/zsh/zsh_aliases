@@ -41,8 +41,8 @@ alias ..='cd ..'
 alias c='cd ~/'
 alias d='cd ~/dotfiles'
 alias f='cd ~/Code'
-alias j='cd ~/Documents/TokyoTech/jk4/1q'
-alias k='cd ~/Documents/TokyoTech/DeepLab/workspace'
+alias s='cd $HOME/Code/scrap'
+alias r='cd $HOME/Code/repos'
 
 # alias for git
 alias g='git'
