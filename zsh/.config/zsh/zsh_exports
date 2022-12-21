@@ -12,10 +12,10 @@ WORDCHARS=${WORDCHARS//\/}
 # export MANWIDTH=999
 
 # -- some hacks to use both arm and x64 version of brew --
+export PREFIX="$HOME/localbin"
 export PATH=\
-"$HOME/Code/repos/llvm-project/build15-rt/bin":\
 "$HOME/bin":\
-"$HOME/localbin/bin":\
+"$PREFIX/bin":\
 $HOME/.cargo/bin:\
 /usr/local/go/bin:\
 "$HOME/go/bin":\
@@ -24,7 +24,7 @@ $HOME/.cargo/bin:\
 /usr/local/bin:\
 /usr/local/sbin:\
 $PATH
-export LD_LIBRARY_PATH=$HOME/Code/repos/llvm-project/build15-rt/lib
+export LD_LIBRARY_PATH=$HOME/localbin/lib/
 
 # M1Mac-specific settings
 if [[ "$(uname -s)" == Darwin ]]; then
