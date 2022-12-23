@@ -12,7 +12,7 @@ WORDCHARS=${WORDCHARS//\/}
 # export MANWIDTH=999
 
 # -- some hacks to use both arm and x64 version of brew --
-export PREFIX="$HOME/localbin"
+export PREFIX="$HOME/.local"
 export PATH=\
 "$HOME/bin":\
 "$PREFIX/bin":\
@@ -24,7 +24,7 @@ $HOME/.cargo/bin:\
 /usr/local/bin:\
 /usr/local/sbin:\
 $PATH
-export LD_LIBRARY_PATH=$HOME/localbin/lib/
+export LD_LIBRARY_PATH=$PREFIX/lib/
 
 # M1Mac-specific settings
 if [[ "$(uname -s)" == Darwin ]]; then
