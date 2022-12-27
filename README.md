@@ -36,6 +36,7 @@ asdf reshim
 - asdf
 - bat
 - bottom
+- entr
 - fd
 - fzf
 - git-delta
