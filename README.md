@@ -49,6 +49,7 @@ asdf reshim
 - silversearcher-ag
 - tmux
   - reattach-to-user-namespace(for mac)
+  - tmuxp
 - universal-ctags
 
 ## Fonts
