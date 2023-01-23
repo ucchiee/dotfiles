@@ -23,7 +23,10 @@ import sys
 
 
 def main() -> None:
-    cp = subprocess.run("yabai -m query --spaces --display".split(" "), capture_output=True)
+    cp = subprocess.run(
+        "yabai -m query --spaces --display".split(" "),
+        capture_output=True,
+    )
     data = json.loads(cp.stdout)
 
     # Detect empty space, or create new one
@@ -42,7 +45,10 @@ def main() -> None:
 
     # Move the window
     while True:
-        cp = subprocess.run(f"yabai -m window --space {target_idx}".split(" "), stderr=subprocess.DEVNULL)
+        cp = subprocess.run(
+            f"yabai -m window --space {target_idx}".split(" "),
+            stderr=subprocess.DEVNULL,
+        )
         if cp.returncode != 0:
             target_idx -= 1
             continue
