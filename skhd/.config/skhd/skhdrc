@@ -33,15 +33,10 @@ alt - 0 : yabai -m space --balance
 alt - c : yabai -m space --create && yabai -m space --focus last
 # delete focused space
 alt - d : yabai -m space --destroy
-# move focused window to the newly created space
-alt - m : yabai -m space --create \
-          && UCH_TEMP=$(yabai -m query --spaces --display | jq '.[].index' | tail -n 1) \
-          && yabai -m window --space ${UCH_TEMP} \
-          && yabai -m space --focus ${UCH_TEMP}
-# reverse sommand of the above
-shift + alt - m : [ $(yabai -m query --windows --space | jq '.[].index' | wc -l) -eq 1 ] \
-                  && yabai -m window --space $(yabai -m query --spaces --display | jq '.[].index' | tail -n 1) \
-                  && yabai -m space --destroy
+# move focused window to an empty space
+alt - m : ~/bin/move2empty.py move_focus
+# same command but do not move fucus
+shift + alt - m : ~/bin/move2empty.py
 # rotate tree
 alt - r : yabai -m space --rotate 90
 # mirror tree y-axis
