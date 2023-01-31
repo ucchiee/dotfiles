@@ -27,3 +27,5 @@ setopt autopushd
 # Settings for backslash
 # Might not need this setting
 # [ -f ~/.xkb/mykbd.xkb ] && xkbcomp -I$HOME/.xkb ~/.xkb/mykbd.xkb $DISPLAY 2> /dev/null
+
+RPROMPT='%*'
