@@ -13,8 +13,10 @@ WORDCHARS=${WORDCHARS//\/}
 
 # -- some hacks to use both arm and x64 version of brew --
 export PREFIX="$HOME/.local"
+export PREFIXTMP="$HOME/.tmplocal"
 export PATH=\
 "$HOME/bin":\
+"$PREFIXTMP/bin":\
 "$PREFIX/bin":\
 $HOME/.cargo/bin:\
 /usr/local/go/bin:\
@@ -25,6 +27,8 @@ $HOME/.cargo/bin:\
 /usr/local/sbin:\
 $PATH
 export LD_LIBRARY_PATH=$PREFIX/lib/
+export CC=$PREFIX/bin/clang
+export CXX=$PREFIX/bin/clang++
 
 # M1Mac-specific settings
 if [[ "$(uname -s)" == Darwin ]]; then
