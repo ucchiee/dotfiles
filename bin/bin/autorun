@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/Users/uu/.asdf/shims/python
 
 import argparse
 import glob
@@ -24,7 +24,7 @@ def main(args: argparse.Namespace) -> None:
             else:
                 print("NG")
             last_timestamp_dict[path] = ts
-        time.sleep(1)
+        time.sleep(0.2)
 
 
 if __name__ == "__main__":
