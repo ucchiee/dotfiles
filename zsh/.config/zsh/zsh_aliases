@@ -43,9 +43,9 @@ alias d='cd ~/dotfiles'
 alias f='cd ~/Code'
 alias s='cd $HOME/Code/scrap'
 alias r='cd $HOME/Code/repos'
+alias g='cd $HOME/gomi'
 
 # alias for git
-alias g='git'
 alias ga='git add'
 alias gb='git branch'
 alias gbr='git branch -av'
@@ -132,6 +132,9 @@ export CC=$PREFIXTMP/bin/clang;\
 export CXX=$PREFIXTMP/bin/clang++;\
 export LD_LIBRARY_PATH=$PREFIXTMP/lib;\
 export CPATH=$PREFIXTMP/include\'
+alias set_cc_cxx_sys='\
+export CC=/usr/bin/clang;\
+export CPP=/usr/binn/clang++\'
 alias set_cc_cxx_local='\
 export CC=$HOME/.local/bin/clang;\
 export CXX=$HOME/.local/bin/clang++;\
