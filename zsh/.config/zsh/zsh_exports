@@ -22,9 +22,11 @@ $HOME/.cargo/bin:\
 /usr/local/go/bin:\
 "$HOME/go/bin":\
 $PATH
-export LD_LIBRARY_PATH=$PREFIX/lib/
-export CC=$PREFIX/bin/clang
-export CXX=$PREFIX/bin/clang++
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+# export LD_LIBRARY_PATH=$PREFIX/lib/
+# export CC=$PREFIX/bin/clang
+# export CXX=$PREFIX/bin/clang++
 
 # M1Mac-specific settings
 if [[ "$(uname -s)" == Darwin ]]; then
