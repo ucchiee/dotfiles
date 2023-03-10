@@ -43,3 +43,6 @@
     ~/.ripgreprc: ripgrep/.ripgreprc
     ~/.config/bat/config: bat/bat.conf  # ref) zsh_export
     ~/.bashrc: bash/bashrc
+    ~/.local/share/fonts:
+        if: '[ `uname` = Linux ]'
+        path: fonts
