@@ -46,3 +46,6 @@
     ~/.local/share/fonts:
         if: '[ `uname` = Linux ]'
         path: fonts
+    ~/.config/sketchybar:
+        if: '[ `uname` = Darwin ]'
+        path: sketchybar
