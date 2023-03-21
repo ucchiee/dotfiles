@@ -1,5 +1,6 @@
 . $HOME/.config/zsh/.yazp/plugins/asdf/asdf.sh
 . $HOME/.config/zsh/.yazp/plugins/asdf/completions/asdf.bash
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 export TERM=xterm-256color
