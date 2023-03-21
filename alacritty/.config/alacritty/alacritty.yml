@@ -20,7 +20,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 15.
+  size: 14
 
   offset:
     x: 0
@@ -31,8 +31,8 @@ font:
 
 window:
   padding:
-    x: 1
-    y: 1
+    x: 0
+    y: 0
   decolations: none
   startup_mode: Maximized
   opacity: 1
