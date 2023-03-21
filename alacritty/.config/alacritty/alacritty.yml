@@ -2,7 +2,8 @@ import:
   # - ~/.config/alacritty/snazzy.yml
   # - ~/.config/alacritty/onedark.yml
   # - ~/.config/alacritty/kanagawa.yml
-  - ~/.config/alacritty/onenord.yml
+  # - ~/.config/alacritty/onenord.yml
+  - ~/.config/alacritty/gruvbox-material.yml
 
 font:
   normal:
