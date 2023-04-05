@@ -29,6 +29,11 @@ $PATH
 # export CC=$PREFIX/bin/clang
 # export CXX=$PREFIX/bin/clang++
 
+# Path to wezterm binary
+if [[ "$(uname -s)" == Darwin ]]; then
+  export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
+fi
+
 # M1Mac-specific settings
 if [[ "$(uname -s)" == Darwin ]]; then
   # To find library include path
