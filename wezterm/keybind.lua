@@ -51,6 +51,11 @@ function module.apply_to_config(config)
       mods = "LEADER",
       action = act.ActivatePaneDirection("Down"),
     },
+    {
+      key = "z",
+      mods = "LEADER",
+      action = act.TogglePaneZoomState,
+    },
   }
 end
 
