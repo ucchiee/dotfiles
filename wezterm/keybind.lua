@@ -9,6 +9,7 @@ function module.apply_to_config(config)
     -- moving between tabs
     { key = "h", mods = "ALT|CTRL", action = act.ActivateTabRelative(-1) },
     { key = "l", mods = "ALT|CTRL", action = act.ActivateTabRelative(1) },
+    { key = "0", mods = "CTRL", action = act.ResetFontSize },
     -- leader-related
     {
       key = "t",
