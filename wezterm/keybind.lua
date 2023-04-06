@@ -16,6 +16,10 @@ function module.apply_to_config(config)
       mods = "LEADER|CTRL",
       action = wezterm.action.SendString("\x14"),
     },
+    -- copy mode
+    { key = "[", mods = "LEADER", action = act.ActivateCopyMode },
+    -- quick select
+    { key = "y", mods = "LEADER", action = act.QuickSelect },
     -- panes
     {
       key = "-",
