@@ -15,6 +15,8 @@ function module.apply_to_config(config)
     border_right_color = "#625a54",
     border_bottom_color = "#625a54",
     border_top_color = "#625a54",
+    -- title bar
+    font_size = 14
   }
   -- no title bar
   config.window_decorations = "RESIZE"
