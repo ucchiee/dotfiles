@@ -16,7 +16,7 @@ function module.apply_to_config(config)
     border_bottom_color = "#625a54",
     border_top_color = "#625a54",
     -- title bar
-    font_size = 14
+    font_size = 14,
   }
   -- no title bar
   config.window_decorations = "RESIZE"
@@ -28,8 +28,8 @@ function module.apply_to_config(config)
     bottom = 0,
   }
   -- opacity
-  config.window_background_opacity = 0.4
-  config.text_background_opacity = 0.5
+  config.window_background_opacity = 0.3
+  config.text_background_opacity = 1.0
 end
 
 return module
