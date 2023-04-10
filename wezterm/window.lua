@@ -28,8 +28,8 @@ function module.apply_to_config(config)
     bottom = 0,
   }
   -- opacity
-  config.window_background_opacity = 0.3
-  config.text_background_opacity = 0.9
+  config.window_background_opacity = 0.9
+  config.text_background_opacity = 0.7
 end
 
 return module
