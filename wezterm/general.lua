@@ -7,6 +7,7 @@ function module.apply_to_config(config)
 	for _, dom in ipairs(config.ssh_domains) do
 		dom.assume_shell = "Posix"
 	end
+  config.adjust_window_size_when_changing_font_size = false
 end
 
 return module
