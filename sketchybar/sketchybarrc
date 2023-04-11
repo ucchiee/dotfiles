@@ -89,6 +89,11 @@ sketchybar --add item clock right                              \
                          icon=                                \
                          script="$PLUGIN_DIR/clock.sh"         \
                                                                \
+           --add item port_forwarding right                              \
+           --set port_forwarding script="$PLUGIN_DIR/port_forwarding.sh" \
+                                 update_freq=1                           \
+                                 click_script="ssh -fN -D 8080 lab"      \
+                                                               \
            --add item wifi right                               \
            --set wifi    script="$PLUGIN_DIR/wifi.sh"          \
                          icon=直                               \
@@ -102,10 +107,6 @@ sketchybar --add item clock right                              \
            --set battery script="$PLUGIN_DIR/battery.sh"       \
                          update_freq=120                       \
            --subscribe battery system_woke power_source_change \
-           --add item port_forwarding right                    \
-           --set port_forwarding script="$PLUGIN_DIR/port_forwarding.sh" \
-                                 update_freq=1                         \
-                                 click_script="ssh -fN -D 8080 lab"  \
 
 ##### Finalizing Setup #####
 # The below command is only needed at the end of the initial configuration to
