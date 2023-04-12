@@ -9,7 +9,7 @@ SSH_PID=$(ps aux | grep "ssh -fN" | grep -v grep | awk '{ print $2 }')
 if [ -n "$SSH_PID" ]; then
   UCH_MSG="(FD-OK)"
 else
-  UCH_MSG="(FD-NO)"
+  UCH_MSG="(FD-NG)"
 fi
 
 sketchybar --set $NAME label="$UCH_MSG"
