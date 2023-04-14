@@ -66,6 +66,8 @@ function module.apply_to_config(config)
 			mods = "LEADER|SHIFT",
 			action = act.EmitEvent("trigger-vim-with-select"),
 		},
+		{ key = "p", mods = "LEADER", action = act.ScrollByPage(-1) },
+		{ key = "n", mods = "LEADER", action = act.ScrollByPage(1) },
 		-- workspace
 		{
 			key = "9",
