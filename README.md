@@ -88,9 +88,3 @@ Speeds up key repeat:
 ```
 defaults write -g KeyRepeat -int 1.3
 ```
-
-## TODO
-
-1. Write this README.
-   1. Write about zsh and its plugin manager.
-1. Make tmux config better and easy to read.
