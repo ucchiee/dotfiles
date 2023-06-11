@@ -70,7 +70,7 @@ applications="(Calendar|Mail|Reminders|Microsoft Outlook|Discord|Messages|Slack|
 yabai -m rule --add app="^${applications}$"    manage=on layer=below
 
 # yabai black/stick list
-black_list="(System Preferences|Alfred Preferences|Archive Utility|Finder)"
+black_list="(System Preferences|システム設定|Alfred Preferences|Archive Utility|Finder)"
 yabai -m rule --add app="^${black_list}$" manage=off layer=below
 stick_list="(Digital Color Meter|Calculator)"
 yabai -m rule --add app="^${stick_list}$" manage=off sticky=on
