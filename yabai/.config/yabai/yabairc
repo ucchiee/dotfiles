@@ -59,7 +59,7 @@ yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 1.0
 
 # applications with custom rules
-applications="(Mail|Reminders|Microsoft Outlook|Discord|Messages|Slack|Firefox|Google Chrome|Chrome|Code|Microsoft Word|Preview|Terminal|iTerm2|QuickTime|Player|Spotify|Music|Brave Browser|Vivaldi|Kitty|Alacritty|Trello)"
+applications="(Mail|Reminders|Microsoft Outlook|Discord|Messages|Slack|Firefox|Google Chrome|Chrome|Code|Microsoft Word|Terminal|iTerm2|QuickTime|Player|Spotify|Music|Brave Browser|Vivaldi|Kitty|Alacritty|Trello)"
 
 # NOTE: you need to set the settings for the applications in the 
 #       list first, or else they don't apply properly and you can end up with
@@ -70,7 +70,7 @@ applications="(Mail|Reminders|Microsoft Outlook|Discord|Messages|Slack|Firefox|G
 yabai -m rule --add app="^${applications}$"    manage=on layer=below
 
 # yabai black/stick list
-black_list="(System Preferences|システム設定|Alfred Preferences|Archive Utility|Finder|NordVPN|Calendar)"
+black_list="(System Preferences|システム設定|Alfred Preferences|Archive Utility|Finder|NordVPN|Calendar|Preview)"
 yabai -m rule --add app="^${black_list}$" manage=off layer=below
 stick_list="(Digital Color Meter|Calculator)"
 yabai -m rule --add app="^${stick_list}$" manage=off sticky=on
