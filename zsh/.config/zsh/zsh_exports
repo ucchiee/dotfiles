@@ -17,8 +17,6 @@ export PREFIX="$HOME/.local"
 export PREFIXTMP="$HOME/.tmplocal"
 export PATH=\
 "$HOME/bin":\
-"$PREFIXTMP/bin":\
-"$PREFIX/bin":\
 $HOME/.cargo/bin:\
 /usr/local/go/bin:\
 "$HOME/go/bin":\
