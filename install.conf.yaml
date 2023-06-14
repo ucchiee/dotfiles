@@ -43,9 +43,18 @@
     ~/.ripgreprc: ripgrep/.ripgreprc
     ~/.config/bat/config: bat/bat.conf  # ref) zsh_export
     ~/.bashrc: bash/bashrc
-    ~/.local/share/fonts:
+    ~/.local/share/fonts/JetBrains Mono Bold Nerd Font Complete Mono.ttf:
         if: '[ `uname` = Linux ]'
-        path: fonts
+        path: ./fonts/JetBrains Mono Bold Nerd Font Complete Mono.ttf
+    ~/.local/share/fonts/JetBrains Mono Italic Nerd Font Complete Mono.ttf:
+        if: '[ `uname` = Linux ]'
+        path: ./fonts/JetBrains Mono Italic Nerd Font Complete Mono.ttf
+    ~/.local/share/fonts/JetBrains Mono Regular Nerd Font Complete Mono.ttf:
+        if: '[ `uname` = Linux ]'
+        path: ./fonts/JetBrains Mono Regular Nerd Font Complete Mono.ttf
+    ~/.local/share/fonts/JetBrains Mono Bold Italic Nerd Font Complete Mono.ttf:
+        if: '[ `uname` = Linux ]'
+        path: ./fonts/JetBrains Mono Bold Italic Nerd Font Complete Mono.ttf
     ~/.config/sketchybar:
         if: '[ `uname` = Darwin ]'
         path: sketchybar
