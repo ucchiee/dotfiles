@@ -44,6 +44,7 @@ asdf reshim
 - lazydocker
 - ncdu
 - neovim
+- pngpaste
 - ranger
 - ripgrep
 - ripgrep-all
