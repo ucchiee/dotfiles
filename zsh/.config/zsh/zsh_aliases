@@ -59,6 +59,7 @@ alias gpl='git pull'
 alias gps='git push'
 alias gs='git branch;git status'
 alias gt='git tree'
+alias gsi='git switch -c'
 alias git-gc-strong='git \
   -c gc.pruneExpire=now \
   -c gc.worktreePruneExpire=now \
