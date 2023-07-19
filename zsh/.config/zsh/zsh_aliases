@@ -107,8 +107,8 @@ alias jk='ssh -ND 1080 titech-computing-room'
 alias jkjk='ssh titech-computing-room'
 alias kssh='kitty +kitten ssh'
 alias cmcc='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON .'  # "cmake compile commands"
-alias cmbh='cmake --build .'  # "cmake build here"
-alias cmc='cmake -B'  # "cmake configure"
+alias cmco='cmake -B'  # "cmake configure original" (without Ninja)
+alias cmc='cmake -G "Ninja" -B'  # "cmake configure"
 alias cmb='cmake --build'  # "cmake build"
 
 # CC and CXX variable
