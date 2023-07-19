@@ -108,7 +108,8 @@ alias jkjk='ssh titech-computing-room'
 alias kssh='kitty +kitten ssh'
 alias cmcc='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON .'  # "cmake compile commands"
 alias cmbh='cmake --build .'  # "cmake build here"
-alias cmb='cmake --build'  # "cmake build here"
+alias cmc='cmake -B'  # "cmake configure"
+alias cmb='cmake --build'  # "cmake build"
 
 # CC and CXX variable
 alias set_cc_cxx11='\
