@@ -72,3 +72,6 @@ ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"; 
 ctrl + alt + cmd - q : brew services stop yabai
 # start yabai
 ctrl + alt + cmd - s : brew services start yabai
+
+# Workaround of flicking
+fn - f : yabai -m window --toggle topmost; yabai -m window --toggle zoom-fullscreen; yabai -m window --toggle topmost
