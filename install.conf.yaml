@@ -43,7 +43,7 @@
     ~/.ripgreprc: ripgrep/.ripgreprc
     ~/.config/bat/config: bat/bat.conf  # ref) zsh_export
     ~/.bashrc: bash/bashrc
-    ~/.local/share/JetBrainsMono:
+    ~/.local/share/fonts/JetBrainsMono:
         if: '[ `uname` = Linux ]'
         path: ./fonts/JetBrainsMono
     ~/.config/sketchybar:
