@@ -61,3 +61,6 @@
     ~/.config/wezterm:
         # if: '[ `uname` = Darwin ]'
         path: wezterm
+    ~/.config/hypr:
+        if: '[ `uname` = Linux ]'
+        path: hypr
