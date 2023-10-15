@@ -55,6 +55,9 @@
     ~/.config/hypr:
         if: '[ `uname` = Linux ]'
         path: hypr
+    ~/.config/waybar:
+        if: '[ `uname` = Linux ]'
+        path: waybar
     ~/.config/sway:
         if: '[ `uname` = Linux ]'
         path: sway
