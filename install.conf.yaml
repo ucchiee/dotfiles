@@ -58,6 +58,6 @@
     ~/.config/waybar:
         if: '[ `uname` = Linux ]'
         path: waybar
-    ~/.config/sway:
-        if: '[ `uname` = Linux ]'
-        path: sway
+    # ~/.config/sway:
+    #     if: '[ `uname` = Linux ]'
+    #     path: sway
