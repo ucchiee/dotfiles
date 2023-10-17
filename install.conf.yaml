@@ -58,6 +58,18 @@
     ~/.config/waybar:
         if: '[ `uname` = Linux ]'
         path: waybar
+    ~/.config/wlogout:
+        if: '[ `uname` = Linux ]'
+        path: wlogout
+    ~/.config/swaylock:
+        if: '[ `uname` = Linux ]'
+        path: swaylock
+    ~/.config/mako:
+        if: '[ `uname` = Linux ]'
+        path: mako
+    ~/.config/wofi:
+        if: '[ `uname` = Linux ]'
+        path: wofi
     # ~/.config/sway:
     #     if: '[ `uname` = Linux ]'
     #     path: sway
