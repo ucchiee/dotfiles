@@ -12,7 +12,10 @@ WORDCHARS=${WORDCHARS//\/}
 # export MANPAGER='nvim +Man!'
 # export MANWIDTH=999
 
-# -- some hacks to use both arm and x64 version of brew --
+# llvm related env
+export LLVMPREFIX="$HOME/.local_llvm"
+export LLVM_DIR="$LLVMPREFIX/lib/cmake/llvm"
+
 export PREFIX="$HOME/.local"
 export PREFIXTMP="$HOME/.tmplocal"
 export PATH=\
@@ -41,6 +44,11 @@ if [[ "$(uname -s)" == Darwin ]]; then
   # See: https://stackoverflow.com/questions/64126942/malloc-nano-zone-abandoned-due-to-inability-to-preallocate-reserved-vm-space
   export MallocNanoZone=0
 fi
+
+# Path related useful function
+path_append ()  { path_remove $1; export PATH="$PATH:$1"; }
+path_prepend () { path_remove $1; export PATH="$1:$PATH"; }
+path_remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`; }
 
 fif() {
   if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi
