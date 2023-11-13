@@ -15,11 +15,14 @@ WORDCHARS=${WORDCHARS//\/}
 # llvm related env
 export LLVMPREFIX="$HOME/.local_llvm"
 export LLVM_DIR="$LLVMPREFIX/lib/cmake/llvm"
+# export LD_LIBRARY_PATH=$LLVMPREFIX/lib:$LD_LIBRARY_PATH
 
 export PREFIX="$HOME/.local"
 export PREFIXTMP="$HOME/.tmplocal"
 export PATH=\
 "$HOME/bin":\
+"$LLVMPREFIX/bin":\
+"$PREFIX/bin":\
 $HOME/.cargo/bin:\
 /usr/local/go/bin:\
 "$HOME/go/bin":\
