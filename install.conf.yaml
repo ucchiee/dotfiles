@@ -49,6 +49,9 @@
     ~/.config/sketchybar:
         if: '[ `uname` = Darwin ]'
         path: sketchybar
+    ~/.config/rio:
+        if: '[ `uname` = Darwin ]'
+        path: rio
     ~/.config/wezterm:
         # if: '[ `uname` = Darwin ]'
         path: wezterm
