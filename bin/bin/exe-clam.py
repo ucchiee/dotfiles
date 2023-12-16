@@ -1,13 +1,32 @@
+#!/home/ucchiee/.asdf/shims/python
 import argparse
 import os
+import subprocess
 
 
-def main(args):
+def main(args: argparse.Namespace) -> None:
     bin = os.path.abspath(args.binary)
     os.system(f"extract-bc {bin}")
-    os.system(
-        f"clam.py {bin}.bc -O0 --crab-inter --crab-widening-delay 10 --crab-dom=int --crab-track=sing-mem -m=64 --crab-lower-unsigned-icmp -ojson {bin}.json -oll {bin}.clam.ll"
-    )
+    clam_cmd = [
+        "clam.py",
+        f"{bin}.bc",
+        "-O0",
+        "--crab-inter",
+        "--crab-inter-entry-main",
+        "--devirt-functions=types",
+        # "--devirt-functions=sea-dsa",
+        # "--crab-widening-delay 10",
+        "--crab-dom=int",
+        "--crab-track=sing-mem",
+        "-m=64",
+        "--crab-lower-unsigned-icmp",
+        "-ojson",
+        f"{bin}json",
+        "-oll",
+        f"{bin}.clam.ll",
+    ]
+
+    subprocess.run(clam_cmd, shell=True)
 
 
 if __name__ == "__main__":
