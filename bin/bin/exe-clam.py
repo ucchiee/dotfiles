@@ -8,15 +8,30 @@ def main(args: argparse.Namespace) -> None:
     result_list: list[tuple[str, list[bytes], list[bytes]]] = []
     for bin in args.binary:
         bin = os.path.abspath(bin)
+        bc = f"{bin}.bc"
+        ll = f"{bin}.ll"
         pass_path = os.path.abspath(args._pass)
         json_path = f"{bin}json"
-        clamll_path = f"{bin}.clam.ll"
+        clamll = f"{bin}.clam.ll"
 
         os.system(f"extract-bc {bin}")
+        os.system(f"llvm-dis {bc}")
+
+        # mem2reg
+        # opt -S -mem2reg {bin} -o {bin}
+        mem2reg_cmd = [
+            "opt",
+            "-S",
+            "-mem2reg",
+            ll,
+            "-o",
+            ll,
+        ]
+        subprocess.run(mem2reg_cmd)
 
         clam_cmd = [
             "clam.py",
-            f"{bin}.bc",
+            ll,
             "-O0",
             "--crab-inter",
             # "--crab-inter-entry-main",
@@ -27,11 +42,12 @@ def main(args: argparse.Namespace) -> None:
             "--crab-track=mem",  # better precision (more expensive)
             # "--crab-track=sing-mem",
             "-m=64",
+            "--crab-disable-warnings",
             "--crab-lower-unsigned-icmp",
             "-ojson",
             json_path,
             "-oll",
-            clamll_path,
+            clamll,
         ]
         subprocess.run(clam_cmd)
 
@@ -42,7 +58,7 @@ def main(args: argparse.Namespace) -> None:
             pass_path,
             "-legacy-hello-world",
             f"-clam-json={json_path}",
-            clamll_path,
+            clamll,
             "-S",
             "-o",
             f"{bin}_temp.ll",
