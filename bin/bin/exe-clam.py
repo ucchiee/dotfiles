@@ -2,6 +2,7 @@
 import argparse
 import os
 import subprocess
+import sys
 
 
 def main(args: argparse.Namespace) -> None:
@@ -14,42 +15,43 @@ def main(args: argparse.Namespace) -> None:
         json_path = f"{bin}json"
         clamll = f"{bin}.clam.ll"
 
-        os.system(f"extract-bc {bin}")
-        os.system(f"llvm-dis {bc}")
+        if not args.disable_clam:
+            os.system(f"extract-bc {bin}")
+            os.system(f"llvm-dis {bc}")
 
-        # mem2reg
-        # opt -S -mem2reg {bin} -o {bin}
-        mem2reg_cmd = [
-            "opt",
-            "-S",
-            "-mem2reg",
-            ll,
-            "-o",
-            ll,
-        ]
-        subprocess.run(mem2reg_cmd)
+            # mem2reg
+            # opt -S -mem2reg {bin} -o {bin}
+            mem2reg_cmd = [
+                "opt",
+                "-S",
+                "-mem2reg",
+                ll,
+                "-o",
+                ll,
+            ]
+            subprocess.run(mem2reg_cmd)
 
-        clam_cmd = [
-            "clam.py",
-            ll,
-            "-O0",
-            "--crab-inter",
-            # "--crab-inter-entry-main",
-            "--devirt-functions=types",
-            # "--devirt-functions=sea-dsa",
-            # "--crab-widening-delay=10",
-            "--crab-dom=int",
-            "--crab-track=mem",  # better precision (more expensive)
-            # "--crab-track=sing-mem",
-            "-m=64",
-            "--crab-disable-warnings",
-            "--crab-lower-unsigned-icmp",
-            "-ojson",
-            json_path,
-            "-oll",
-            clamll,
-        ]
-        subprocess.run(clam_cmd)
+            clam_cmd = [
+                "clam.py",
+                ll,
+                "-O0",
+                "--crab-inter",
+                # "--crab-inter-entry-main",
+                "--devirt-functions=types",
+                # "--devirt-functions=sea-dsa",
+                # "--crab-widening-delay=10",
+                "--crab-dom=int",
+                "--crab-track=mem",  # better precision (more expensive)
+                # "--crab-track=sing-mem",
+                "-m=64",
+                "--crab-disable-warnings",
+                "--crab-lower-unsigned-icmp",
+                "-ojson",
+                json_path,
+                "-oll",
+                clamll,
+            ]
+            subprocess.run(clam_cmd)
 
         pass_cmd = [
             "opt",
@@ -64,15 +66,18 @@ def main(args: argparse.Namespace) -> None:
             f"{bin}_temp.ll",
         ]
 
-        cp = subprocess.run(pass_cmd, capture_output=True)
-        print((cp.stdout))
-        print((cp.stderr))
+        print(f"=={bin}==", file=sys.stderr)
+        cp = subprocess.run(pass_cmd, capture_output=args.capture_output)
+        if args.capture_output:
+            print((cp.stdout))
+            print((cp.stderr))
 
-        result_list.append(
-            (os.path.basename(bin), cp.stdout.splitlines(), cp.stderr.splitlines())
-        )
+            result_list.append(
+                (os.path.basename(bin), cp.stdout.splitlines(), cp.stderr.splitlines())
+            )
 
-    __import__("pprint").pprint(result_list)
+    if args.capture_output:
+        __import__("pprint").pprint(result_list)
 
 
 if __name__ == "__main__":
@@ -81,5 +86,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-b", "--binary", type=str, nargs="+", help="path to binary, can be multiple"
     )
+    parser.add_argument("--disable_clam", action="store_true")
+    parser.add_argument("--capture_output", action="store_true")
     args = parser.parse_args()
     main(args)
