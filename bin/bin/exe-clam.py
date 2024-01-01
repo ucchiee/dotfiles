@@ -1,8 +1,11 @@
 #!/home/ucchiee/.asdf/shims/python
 import argparse
+import datetime
 import os
 import subprocess
 import sys
+
+now = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
 
 def main(args: argparse.Namespace) -> None:
@@ -16,8 +19,11 @@ def main(args: argparse.Namespace) -> None:
         clamll = f"{bin}.clam.ll"
 
         if not args.disable_clam:
+            print(bin)
             os.system(f"extract-bc {bin}")
+            print("extract-bc")
             os.system(f"llvm-dis {bc}")
+            print("llvm-dis")
 
             # mem2reg
             # opt -S -mem2reg {bin} -o {bin}
@@ -31,6 +37,8 @@ def main(args: argparse.Namespace) -> None:
             ]
             subprocess.run(mem2reg_cmd)
 
+            print("mem2reg")
+
             clam_cmd = [
                 "clam.py",
                 ll,
@@ -42,6 +50,9 @@ def main(args: argparse.Namespace) -> None:
                 # "--crab-widening-delay=10",
                 "--crab-dom=int",
                 "--crab-track=mem",  # better precision (more expensive)
+                # "--crab-heap-analysis=none",
+                "--crab-opt",
+                "none",
                 # "--crab-track=sing-mem",
                 "-m=64",
                 "--crab-disable-warnings",
@@ -53,17 +64,24 @@ def main(args: argparse.Namespace) -> None:
             ]
             subprocess.run(clam_cmd)
 
+        # end of if
+        json_bak = f"{json_path}{now}bak"
+        clamll_bak = f"{clamll}.{now}.bak"
+        os.system(f"cp {json_path} {json_bak}")
+        os.system(f"cp {clamll} {clamll_bak}")
+
         pass_cmd = [
             "opt",
+            "-stats",
             "-enable-new-pm=0",
             "-load",
             pass_path,
             "-legacy-hello-world",
-            f"-clam-json={json_path}",
-            clamll,
+            f"-clam-json={json_bak}",
+            clamll_bak,
             "-S",
             "-o",
-            f"{bin}_temp.ll",
+            f"{bin}.instr.ll",
         ]
 
         print(f"=={bin}==", file=sys.stderr)
