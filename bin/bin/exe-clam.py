@@ -23,12 +23,10 @@ def main(args: argparse.Namespace) -> None:
         print(f"=={bin}==")
 
         if not args.disable_clam:
-            print(bin)
-            if not args.dry_run:
-                os.system(f"extract-bc {bin}")
-                print("extract-bc")
-                os.system(f"llvm-dis {bc}")
-                print("llvm-dis")
+            os.system(f"extract-bc {bin}")
+            print("extract-bc")
+            os.system(f"llvm-dis {bc}")
+            print("llvm-dis")
 
             # mem2reg
             # opt -S -mem2reg {bin} -o {bin}
