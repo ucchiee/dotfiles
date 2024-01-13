@@ -38,9 +38,9 @@ def main(args: argparse.Namespace) -> None:
                 "-o",
                 ll,
             ]
+            print(" ".join(mem2reg_cmd))
             subprocess.run(mem2reg_cmd)
 
-            print("mem2reg")
 
             clam_cmd = [
                 "clam.py",
@@ -65,6 +65,7 @@ def main(args: argparse.Namespace) -> None:
                 "-oll",
                 clamll,
             ]
+            print(" ".join(clam_cmd))
             subprocess.run(clam_cmd)
 
         # end of if
