@@ -6,7 +6,7 @@ import subprocess
 
 def main(args: argparse.Namespace) -> None:
     for bin in args.binary:
-        """ bin = os.path.abspath(bin) """
+        """bin = os.path.abspath(bin)"""
         as_path = f"{bin}.s"
 
         # 元のバイナリのバックアップを取る
@@ -50,6 +50,12 @@ def main(args: argparse.Namespace) -> None:
             print("Compilatin Done!")
 
 
+def restore(args: argparse.Namespace) -> None:
+    for bin in args.binary:
+        bin_org = f"{bin}.org"
+        os.system(f"mv {bin_org} {bin}")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -59,5 +65,10 @@ if __name__ == "__main__":
         "--use_instr", action="store_true", help="use *.instr.ll, default *.clam.ll.bak"
     )
     parser.add_argument("--slh", action="store_true", help="enable SLH")
+    parser.add_argument("--restore", action="store_true", help="restore original binary")
     args = parser.parse_args()
-    main(args)
+
+    if args.restore:
+        restore(args)
+    else:
+        main(args)
