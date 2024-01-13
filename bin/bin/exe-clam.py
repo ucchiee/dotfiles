@@ -18,6 +18,9 @@ def main(args: argparse.Namespace) -> None:
         json_path = f"{bin}json"
         clamll = f"{bin}.clam.ll"
 
+        print(f"=={bin}==", file=sys.stderr)
+        print(f"=={bin}==")
+
         if not args.disable_clam:
             print(bin)
             os.system(f"extract-bc {bin}")
@@ -84,7 +87,6 @@ def main(args: argparse.Namespace) -> None:
             f"{bin}.instr.ll",
         ]
 
-        print(f"=={bin}==", file=sys.stderr)
         cp = subprocess.run(pass_cmd, capture_output=args.capture_output)
         if args.capture_output:
             print((cp.stdout))
