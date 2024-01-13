@@ -53,6 +53,7 @@ def main(args: argparse.Namespace) -> None:
                 # "--crab-widening-delay=10",
                 "--crab-dom=int",
                 "--crab-track=mem",  # better precision (more expensive)
+                # "--crab-track=num",  # better scalability
                 # "--crab-heap-analysis=none",
                 "--crab-opt",
                 "none",
