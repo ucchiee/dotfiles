@@ -16,7 +16,9 @@ def main(args: argparse.Namespace) -> None:
         ll = f"{bin}.ll"
         # pass_path = os.path.abspath(args._pass)
         pass_path = args._pass
-        json_path = f"{bin}json"
+        bin_dir, bin_name = os.path.split(bin)
+        bin_without_dot = bin_name.replace(".", "")
+        json_path = f"{os.path.join(bin_dir, bin_without_dot)}.json"
         clamll = f"{bin}.clam.ll"
 
         print(f"=={bin}==", file=sys.stderr)
@@ -39,8 +41,7 @@ def main(args: argparse.Namespace) -> None:
                 ll,
             ]
             print(" ".join(mem2reg_cmd))
-            if not args.dry_run:
-                subprocess.run(mem2reg_cmd)
+            subprocess.run(mem2reg_cmd)
 
             clam_cmd = [
                 "clam.py",
@@ -48,19 +49,19 @@ def main(args: argparse.Namespace) -> None:
                 "-O0",
                 "--crab-inter",
                 # "--crab-inter-entry-main",
-                "--devirt-functions=types",
-                # "--devirt-functions=sea-dsa",
-                "--crab-widening-delay=10",  # better precision
+                # "--devirt-functions=types",
+                "--devirt-functions=sea-dsa",
+                "--crab-widening-delay=3",  # better precision
                 "--crab-dom=int",
                 "--crab-track=mem",  # better precision (more expensive)
                 # "--crab-track=num",  # better scalability
-                # "--crab-heap-analysis=none",
+                # "--crab-heap-analysis=none",  # better scalability
                 "--crab-opt",
                 "none",
                 # "--crab-track=sing-mem",
                 "-m=64",
-                "--crab-disable-warnings",
-                "--crab-lower-unsigned-icmp",
+                # "--crab-disable-warnings",
+                # "--crab-lower-unsigned-icmp",
                 "-ojson",
                 json_path,
                 "-oll",
@@ -71,7 +72,7 @@ def main(args: argparse.Namespace) -> None:
                 subprocess.run(clam_cmd)
 
         # end of if
-        json_bak = f"{json_path}{now}bak"
+        json_bak = f"{json_path}.{now}.bak"
         clamll_bak = f"{clamll}.{now}.bak"
         os.system(f"cp {json_path} {json_bak}")
         os.system(f"cp {clamll} {clamll_bak}")
@@ -83,8 +84,8 @@ def main(args: argparse.Namespace) -> None:
             "-load",
             pass_path,
             "-legacy-hello-world",
-            f"-clam-json={json_bak}",
-            clamll_bak,
+            f"-clam-json={json_path}",
+            clamll,
             "-S",
             "-o",
             f"{bin}.instr.ll",
