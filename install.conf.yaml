@@ -14,6 +14,8 @@
     ~/.gitconfig: git/.gitconfig
     ~/.ideavimrc: vim/.ideavimrc
     ~/.latexmkrc: latex/.latexmkrc
+    ~/.latexindent.yaml: ./latexindent/latexindent.yaml
+    ~/.indentconfig.yaml: ./latexindent/indentconfig.yaml
     ~/.pre-commit-config.yaml: pre-commit/.pre-commit-config.yaml
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.tool-versions: asdf/.tool-versions
