@@ -89,3 +89,8 @@ Speeds up key repeat:
 ```
 defaults write -g KeyRepeat -int 1.3
 ```
+
+Romaji-Hiragana:
+
+- "日本語 - ローマ字入力" > "入力モード" で "英字" にチェックを入れる。
+  - Hammerspoon を利用した Command による IME の切り替えを有効にするために必要。
