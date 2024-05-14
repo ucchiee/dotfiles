@@ -15,6 +15,7 @@ WORDCHARS=${WORDCHARS//\/}
 # llvm related env
 export LLVMPREFIX="$HOME/.local_llvm"
 export LLVM_DIR="$LLVMPREFIX/lib/cmake/llvm"
+export LLVM_CONFIG="$LLVMPREFIX/bin/llvm-config"
 # export LD_LIBRARY_PATH=$LLVMPREFIX/lib:$LD_LIBRARY_PATH
 
 export PREFIX="$HOME/.local"
